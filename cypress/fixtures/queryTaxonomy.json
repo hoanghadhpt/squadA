@@ -1,9 +1,5 @@
 [
-    {
-        "contentType": "page content format",
-       "queryBody": "TermSelectors/PageContentFormat.txt",
-        "pageContent": "page_content_format"
-    },
+   
     {
         "contentType": "All Contributor",
        "queryBody": "TermSelectors/queryAllContributors.txt",
