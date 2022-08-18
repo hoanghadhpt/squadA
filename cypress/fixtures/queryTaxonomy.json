@@ -1,0 +1,42 @@
+[
+    {
+        "contentType": "page content format",
+       "queryBody": "/CoreContentType/PageContentFormat.txt",
+        "pageContent": "page_content_format"
+    },
+    {
+        "contentType": "All Contributor",
+       "queryBody": "/CoreContentType/queryAllContributors.txt",
+        "pageContent": "all_contributor"
+    },
+    {
+        "contentType": "All Country",
+       "queryBody": "/CoreContentType/queryAllCountry.txt",
+        "pageContent": "all_country"
+    },
+    {
+        "contentType": "All Keywords",
+       "queryBody": "/CoreContentType/queryAllKeywords.txt",
+        "pageContent": "all_keyword"
+    },
+    {
+        "contentType": "All Sponsors",
+       "queryBody": "/CoreContentType/queryAllSponsors.txt",
+        "pageContent": "all_sponsor"
+    },
+    {
+        "contentType": "All Topic Primary",
+       "queryBody": "/CoreContentType/queryAllTopicPrimary.txt",
+        "pageContent": "all_topic_primary"
+    },
+    {
+        "contentType": "All Topic Secondary",
+       "queryBody": "/CoreContentType/queryAllTopicSecondary.txt",
+        "pageContent": "all_topic_secondary"
+    },
+    {
+        "contentType": "All Topic Tertiary",
+       "queryBody": "/CoreContentType/queryAllTopicTertiary.txt",
+        "pageContent": "all_topic_tertiary"
+    }
+]

@@ -1,5 +1,5 @@
-import queryPageContent from '../PageObjects/query_pages';
-import ApiShareObjects from '../PageObjects/apiSharedObjects';
+import queryPageContent from '../../PageObjects/query_pages';
+import ApiShareObjects from '../../PageObjects/apiSharedObjects';
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
@@ -11,7 +11,7 @@ describe(`Smoke test`, () => {
       })
     const queryGraphql = new queryPageContent()
     const apiExpected = new ApiShareObjects()
-    const testData = require("../../../fixtures/inputAPI/queryCoreContentTypes.json");
+    const testData = require("../../fixtures/queryCoreContentTypes.json");
     describe("Query page content", () => {
         testData.forEach((testDataRow: any) => {
             const testData = {

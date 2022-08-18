@@ -3,6 +3,8 @@ let statusCode
 let body 
 module.exports = defineConfig({
     e2e: {
+      excludeSpecPattern: ['*.page.js', 'utils.js', '*.ts'],
+      specPattern: 'cypress/e2e/**/*spec.{js,ts}',
       setupNodeEvents(on, config) { 
         on('task', {  
             setStatus: (val) => {

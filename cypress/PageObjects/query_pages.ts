@@ -1,5 +1,5 @@
-import constant from "../../fixtures/constant";
-import queryApi from "../../fixtures/queryAPi";
+import constant from "../fixtures/constant.ts"
+import queryApi from "../fixtures/queryAPi";
 import { apiPost } from "./apiSend";
 class queryPageContent extends queryApi {
     constructor() {
