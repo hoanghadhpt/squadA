@@ -1,0 +1,82 @@
+[
+    {
+        "contentType": "page content format",
+       "queryBody": "CoreContentType/PageContentFormat.txt",
+        "pageContent": "page_content_format"
+    },
+    {
+        "contentType": "page contributor",
+      "queryBody": "/CoreContentType/PageContributor.txt",
+        "pageContent": "page_contributor"
+    },
+    {
+        "contentType": "All Article",
+       "queryBody": "/CoreContentType/queryAllArticles.txt",
+        "pageContent": "all_article"
+    },
+    {
+        "contentType": "All Document",
+       "queryBody": "/CoreContentType/queryAllDocuments.txt",
+        "pageContent": "all_document"
+    },
+    {
+        "contentType": "All Event",
+       "queryBody": "/CoreContentType/queryAllEvents.txt",
+        "pageContent": "all_event"
+    },
+    {
+        "contentType": "All Webinar",
+       "queryBody": "/CoreContentType/queryAllWebinars.txt",
+        "pageContent": "all_webinar"
+    },
+    {
+        "contentType": "All PodCasts",
+       "queryBody": "/CoreContentType/queryAllPodCasts.txt",
+        "pageContent": "all_podcast"
+    },
+    {
+        "contentType": "All Video",
+       "queryBody": "/CoreContentType/queryAllVideos.txt",
+        "pageContent": "all_video"
+    },
+    {
+        "contentType": "All SlideShow",
+       "queryBody": "/CoreContentType/queryAllSlideShows.txt",
+        "pageContent": "all_slideshow"
+    },
+    {
+        "contentType": "All Contributor",
+       "queryBody": "/CoreContentType/queryAllContributors.txt",
+        "pageContent": "all_contributor"
+    },
+    {
+        "contentType": "All Country",
+       "queryBody": "/CoreContentType/queryAllCountry.txt",
+        "pageContent": "all_country"
+    },
+    {
+        "contentType": "All Keywords",
+       "queryBody": "/CoreContentType/queryAllKeywords.txt",
+        "pageContent": "all_keyword"
+    },
+    {
+        "contentType": "All Sponsors",
+       "queryBody": "/CoreContentType/queryAllSponsors.txt",
+        "pageContent": "all_sponsor"
+    },
+    {
+        "contentType": "All Topic Primary",
+       "queryBody": "/CoreContentType/queryAllTopicPrimary.txt",
+        "pageContent": "all_topic_primary"
+    },
+    {
+        "contentType": "All Topic Secondary",
+       "queryBody": "/CoreContentType/queryAllTopicSecondary.txt",
+        "pageContent": "all_topic_secondary"
+    },
+    {
+        "contentType": "All Topic Tertiary",
+       "queryBody": "/CoreContentType/queryAllTopicTertiary.txt",
+        "pageContent": "all_topic_secondary"
+    }
+]
