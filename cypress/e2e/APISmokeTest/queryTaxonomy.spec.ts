@@ -11,8 +11,8 @@ describe(`Smoke test`, () => {
       })
     const queryGraphql = new queryPageContent()
     const apiExpected = new ApiShareObjects()
-    const testData = require("../../fixtures/queryCoreContentTypes.json");
-    describe("Query page content", () => {
+    const testData = require("../../fixtures/queryTaxonomy.json");
+    describe("Query all taxonomy", () => {
         testData.forEach((testDataRow: any) => {
             const testData = {
                 contentType: testDataRow.contentType,
@@ -20,7 +20,7 @@ describe(`Smoke test`, () => {
                 pageContent: testDataRow.pageContent
             };
         context(`Query page content: ${testData.contentType}`, ()=>{ 
-            it(`Given I send the graphql query for page content format `, () =>{
+            it(`Given I send the graphql query for ${testData.contentType} `, () =>{
                 queryGraphql.queryPageContentApi(testData.queryBody)
                 cy.get('@resBody').then(resBody => {
                     cy.task('setStatus', resBody.status);
@@ -36,9 +36,7 @@ describe(`Smoke test`, () => {
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
             it("And Required Field should not be empty", () =>{
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
-                
+                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
             })
         })
     })
