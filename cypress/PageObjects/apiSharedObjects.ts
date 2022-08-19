@@ -19,7 +19,7 @@ class ApiShareObjects {
 
         expect(body.data).to.have.all.keys(contentType)
         cy.wrap(body.data).its(contentType).then((itemList) =>{
-            expect(itemList.items).not.null
+            expect(itemList.items).not.empty
         })
         
     }
@@ -27,7 +27,7 @@ class ApiShareObjects {
     verifyBodyNotNull(contentType: string){
         cy.task('getBody').then( resBody => { 
             cy.wrap(resBody.data).its(contentType).then((itemList) =>{
-                expect(itemList.items).not.null
+                expect(itemList.items).not.empty
             })  
         })  
     }
