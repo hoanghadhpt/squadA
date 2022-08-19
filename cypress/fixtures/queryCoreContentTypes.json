@@ -1,43 +1,39 @@
 [
     
-    {
-        "contentType": "page contributor",
-      "queryBody": "/CoreContentType/PageContributor.txt",
-        "pageContent": "page_contributor"
-    },
+    
     {
         "contentType": "All Article",
-       "queryBody": "/CoreContentType/queryAllArticles.txt",
+       "queryBody": "CoreContentType/queryAllArticles.txt",
         "pageContent": "all_article"
     },
     {
         "contentType": "All Document",
-       "queryBody": "/CoreContentType/queryAllDocuments.txt",
+       "queryBody": "CoreContentType/queryAllDocuments.txt",
         "pageContent": "all_document"
     },
     {
         "contentType": "All Event",
-       "queryBody": "/CoreContentType/queryAllEvents.txt",
+       "queryBody": "CoreContentType/queryAllEvents.txt",
         "pageContent": "all_event"
     },
     {
         "contentType": "All Webinar",
-       "queryBody": "/CoreContentType/queryAllWebinars.txt",
+       "queryBody": "CoreContentType/queryAllWebinars.txt",
         "pageContent": "all_webinar"
     },
     {
         "contentType": "All PodCasts",
-       "queryBody": "/CoreContentType/queryAllPodCasts.txt",
+       "queryBody": "CoreContentType/queryAllPodCasts.txt",
         "pageContent": "all_podcast"
     },
     {
         "contentType": "All Video",
-       "queryBody": "/CoreContentType/queryAllVideos.txt",
+       "queryBody": "CoreContentType/queryAllVideos.txt",
         "pageContent": "all_video"
     },
     {
         "contentType": "All SlideShow",
-       "queryBody": "/CoreContentType/queryAllSlideShows.txt",
+       "queryBody": "CoreContentType/queryAllSlideShows.txt",
         "pageContent": "all_slideshow"
     }
 ]

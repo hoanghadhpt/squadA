@@ -3,7 +3,8 @@ class constant {
     static path_query_footer = '/inputAPI/queryFooter.text'
     static path_query_navigation = '/inputAPI/queryNavigation.text'
 
-    static path = "https://content.preview.scm.informagt.com/v1/graphql?client_id=master"
+    static path = "/v1/graphql?client_id=master"
+    static apiUrl = 'https://content.preview.scm.informagt.com'
     static method_post = "Post"
 
 

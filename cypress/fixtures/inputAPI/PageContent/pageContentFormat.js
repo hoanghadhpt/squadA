@@ -1,5 +1,5 @@
 query {
-  page_content_format(where: { url: "/latest/news" }) {
+  page_content_format(where: { url: ${url} }) {
     items {
       ... on Article {
         contentTypeUid

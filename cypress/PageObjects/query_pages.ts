@@ -1,4 +1,5 @@
-import constant from "../fixtures/constant.ts"
+import cypress from "cypress";
+import constant from "../fixtures/constant"
 import queryApi from "../fixtures/queryAPi";
 import { apiPost } from "./apiSend";
 class queryPageContent extends queryApi {
@@ -6,10 +7,13 @@ class queryPageContent extends queryApi {
         super();
     }
     //query graphql
-    queryPageContentApi(queryBodyFile) {
+    
+    queryPageContentApi(envAPI:string, queryBodyFile) {
+        var requestUrl = `${constant.apiUrl}` + `${Cypress.env(envAPI)}`
+        cy.log(Cypress.env(envAPI))
         var pageContentPath = `/inputAPI/${queryBodyFile}`
         cy.fixture(pageContentPath).then((bodyQuery) =>{
-            apiPost.graphqlPost(constant.method_post, constant.path, bodyQuery)
+            apiPost.graphqlPost(constant.method_post, requestUrl, bodyQuery)
         })
     }
     

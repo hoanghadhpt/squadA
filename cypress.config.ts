@@ -4,7 +4,7 @@ let body
 module.exports = defineConfig({
     e2e: {
       excludeSpecPattern: ['*.page.js', 'utils.js', '*.ts'],
-      specPattern: 'cypress/e2e/**/*spec.{js,ts}',
+      specPattern: 'cypress/e2e/**/*cy.{js,ts}',
       setupNodeEvents(on, config) { 
         on('task', {  
             setStatus: (val) => {
@@ -22,6 +22,12 @@ module.exports = defineConfig({
               return body 
             }
           });
+    },
+    env:{
+      baseUrl: "https://content.preview.scm.informagt.com",
+      masterAPI : "/v1/graphql?client_id=master",
+      farmprogressAPI: "/v1/graphql?client_id=farmprogress",
+      scmDemoAPI: "/v1/graphql?client_id=scmdemo"
     }
       
     },

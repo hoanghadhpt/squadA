@@ -3,5 +3,10 @@
         "contentType": "page content format",
        "queryBody": "TermSelectors/PageContentFormat.txt",
         "pageContent": "page_content_format"
+    },
+    {
+        "contentType": "page contributor",
+       "queryBody": "CoreContentType/PageContributor.txt",
+        "pageContent": "page_contributor"
     }
 ]
