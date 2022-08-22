@@ -21,7 +21,7 @@ describe(`Smoke test`, () => {
             };
         context(`Query page content: ${testData.contentType}`, ()=>{ 
             it(`Given I send the graphql query for ${testData.contentType} `, () =>{
-                queryGraphql.queryPageContentApi('scmDemoAPI', testData.queryBody)
+                queryGraphql.queryPageContentApi('masterAPI', testData.queryBody)
                 cy.get('@resBody').then(resBody => {
                     cy.task('setStatus', resBody.status);
                     cy.task('setBody', resBody.body)

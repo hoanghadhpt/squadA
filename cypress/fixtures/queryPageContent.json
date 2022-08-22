@@ -1,12 +1,32 @@
 [
     {
         "contentType": "page content format",
-       "queryBody": "TermSelectors/PageContentFormat.txt",
+       "queryBody": "PageContent/PageContentFormat.txt",
         "pageContent": "page_content_format"
     },
     {
         "contentType": "page contributor",
-       "queryBody": "CoreContentType/PageContributor.txt",
+       "queryBody": "PageContent/PageContributor.txt",
         "pageContent": "page_contributor"
+    },
+    {
+        "contentType": "page event",
+       "queryBody": "PageContent/PageEvent.txt",
+        "pageContent": "page_event"
+    },
+    {
+        "contentType": "page keyword",
+       "queryBody": "PageContent/PageKeyword.txt",
+        "pageContent": "page_keyword"
+    },
+    {
+        "contentType": "page Series",
+       "queryBody": "PageContent/PageSeries.txt",
+        "pageContent": "page_series"
+    },
+    {
+        "contentType": "page Subbrand",
+       "queryBody": "PageContent/PageSubbrand.txt",
+        "pageContent": "page_subbrand"
     }
 ]
