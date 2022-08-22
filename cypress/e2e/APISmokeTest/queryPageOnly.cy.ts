@@ -1,6 +1,6 @@
 import queryPageContent from '../../PageObjects/query_pages';
 import ApiShareObjects from '../../PageObjects/apiSharedObjects';
-import PageContent from '../../PageObjects/pageContent';
+
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
@@ -12,7 +12,7 @@ describe(`Smoke test`, () => {
       })
     const queryGraphql = new queryPageContent();
     const apiExpected = new ApiShareObjects();
-    const pageContentExpected = new PageContent();
+
     const testData = require("../../fixtures/queryPage.json");
     describe("Check Query all page content", () => {
         testData.forEach((testDataRow: any) => {
@@ -38,7 +38,7 @@ describe(`Smoke test`, () => {
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
             it("And Required Field should not be empty", () =>{
-                pageContentExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
+                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
             })
         })
     })
