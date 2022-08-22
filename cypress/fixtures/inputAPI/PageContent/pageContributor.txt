@@ -1,0 +1,183 @@
+query pageContributor {
+  page_contributor(limit: 5
+    sort: newest
+    
+    where: { url: "/author/denzel-washington" })
+    # where:{url:"/author/test"})
+  {
+    meta {
+      pagination {
+        total
+        totalPage
+        limit
+        page
+      }
+      entry {
+        title
+        contributorName
+        contributorRole
+        contributorSummary
+        contributorDescription
+        contentTypeUid
+        userRoles
+        contributorImage {
+          image {
+            url
+          }
+          imageAltText
+        }
+        seo {
+          metaTitle
+          metaDescription
+          canonicalUrl
+          noIndex
+        }
+      }
+    }
+    items {
+      __typename
+      ... on Article {
+        title
+        uid
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        contributor{
+          contributorName
+        }
+        termSelector {
+          primaryTerm
+          primaryTermInRealText
+          secondaryTerm
+        }
+      }
+      ... on Document {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        termSelector {
+          primaryTerm
+          primaryTermInRealText
+          secondaryTerm
+        }
+      }
+      ... on Webinar {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        termSelector {
+          primaryTerm
+          primaryTermInRealText
+          secondaryTerm
+        }
+      }
+      ... on Slideshow {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        termSelector {
+          primaryTerm
+          primaryTermInRealText
+          secondaryTerm
+        }
+      }
+      ... on Podcast {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        termSelector {
+          primaryTerm
+          primaryTermInRealText
+          secondaryTerm
+        }
+      }
+      ... on Video {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        termSelector {
+          primaryTerm
+          primaryTermInRealText
+          secondaryTerm
+        }
+      }
+    }
+  }
+}

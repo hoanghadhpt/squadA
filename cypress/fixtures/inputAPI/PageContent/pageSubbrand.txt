@@ -1,0 +1,151 @@
+query {
+  page_subbrand (
+    limit: 30
+  	page: 1
+  	sort: newest
+    where:{
+      url:"/c-h-i-hoan"
+    }
+  ){
+    items {
+      __typename
+      ... on Article {
+        title
+        uid
+        body
+        bodyJson
+        readTime
+        contributor{
+          contributorName
+          contributorImage{image{url}
+          imageAltText}
+        }
+        featuredImageGroup{
+          featuredImage{url}
+          featuredImageCaption
+          featuredImageCredit
+          imageAltText
+        }
+        publishedDate
+      }
+      ... on  Document{
+        title
+        uid
+        body
+        bodyJson
+        readTime
+        contributor{
+          contributorName
+          contributorImage{image{url}
+          imageAltText}
+        }
+        featuredImageGroup{
+          featuredImage{url}
+          featuredImageCaption
+          featuredImageCredit
+          imageAltText
+        }
+        publishedDate
+      }
+      ... on  Podcast{
+        title
+        uid
+        body
+        bodyJson
+        readTime
+        contributor{
+          contributorName
+          contributorImage{image{url}
+          imageAltText}
+        }
+        featuredImageGroup{
+          featuredImage{url}
+          featuredImageCaption
+          featuredImageCredit
+          imageAltText
+        }
+        publishedDate
+      }
+      ... on  Slideshow{
+        title
+        uid
+        body
+        bodyJson
+        readTime
+        contributor{
+          contributorName
+          contributorImage{image{url}
+          imageAltText}
+        }
+        featuredImageGroup{
+          featuredImage{url}
+          featuredImageCaption
+          featuredImageCredit
+          imageAltText
+        }
+        publishedDate
+      }
+      ... on  Video{
+        title
+        uid
+        body
+        bodyJson
+        readTime
+        contributor{
+          contributorName
+          contributorImage{image{url}
+          imageAltText}
+        }
+        featuredImageGroup{
+          featuredImage{url}
+          featuredImageCaption
+          featuredImageCredit
+          imageAltText
+        }
+        publishedDate
+      }
+      ... on Webinar {
+        title
+        uid
+        body
+        bodyJson
+        contributor{
+          contributorName
+          contributorImage{image{url}
+          imageAltText}
+        }
+        featuredImageGroup{
+          featuredImage{url}
+          featuredImageCaption
+          featuredImageCredit
+          imageAltText
+        }
+        publishedDate
+      }
+    }
+    meta {
+      entry {
+        title
+        uid
+        locale
+        seo{
+          canonicalUrl
+          metaDescription
+          metaTitle
+          noIndex
+        }
+        subbrandLogoGroup{
+          subbrandImage {url}
+          subbrandImageAltText
+        }
+        url
+      }
+      pagination {
+        limit
+        page
+        total
+        totalPage
+      }
+    }
+  }
+}
