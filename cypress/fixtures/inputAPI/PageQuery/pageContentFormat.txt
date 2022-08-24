@@ -1,5 +1,5 @@
 query {
-  page_content_format(where: { url: ${url} }) {
+  page_content_format(where: { url: "/latest/glossary" }) {
     items {
       ... on Article {
         contentTypeUid

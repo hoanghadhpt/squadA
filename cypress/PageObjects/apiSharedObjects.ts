@@ -27,7 +27,13 @@ class ApiShareObjects {
     verifyBodyNotNull(contentType: string){
         cy.task('getBody').then( resBody => { 
             cy.wrap(resBody.data).its(contentType).then((itemList) =>{
-                expect(itemList.items).not.empty
+                if(contentType.includes('_basic')||contentType.includes('_content')){
+                    expect(itemList).not.empty
+                }
+                else{
+                    expect(itemList.items).not.empty
+                }
+                
             })  
         })  
     }
