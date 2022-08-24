@@ -2,15 +2,14 @@
 class PageContent {
     verifyRequiredFieldNotNull(contentType: string, requiredField: string){
         cy.task('getBody').then(resBody =>{            
-            const itemsArr = resBody.data[contentType].contents;
-            itemsArr.forEach(item => {
+            cy.get(resBody.data[contentType].contents ).then(item =>{
                 if(contentType === 'page_event' && requiredField === 'publishedDate') {
                     expect(item).not.have.property(requiredField)
                 }
                 else{
-                    expect(item).property(requiredField).not.null
+                    expect(item).property(requiredField).not.null 
                 }
-            }) 
+            })        
         })
         
     }

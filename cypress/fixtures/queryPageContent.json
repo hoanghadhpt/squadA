@@ -1,7 +1,7 @@
 [
     {
         "contentType": "Basic Page",
-       "queryBody": "PageQuery/pageBasic.txt",
+       "queryBody": "PageContent/pageBasic.txt",
         "pageContent": "page_basic"
     },
     {
