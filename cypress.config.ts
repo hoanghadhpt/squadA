@@ -28,8 +28,9 @@ module.exports = defineConfig({
       masterAPI : "/v1/graphql?client_id=master",
       farmprogressAPI: "/v1/graphql?client_id=farmprogress",
       scmDemoAPI: "/v1/graphql?client_id=scmdemo"
-    }
-      
+    },
+    "video": false,
+    "screenshotOnRunFailure": false
     },
   },
   {
