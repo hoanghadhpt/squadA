@@ -13,7 +13,7 @@ pipeline {
     stage('Running') {
       steps {
         echo "Start cypress..."
-        sh "npx cypress run --headless --browser chrome"
+        sh "npx cypress run --headless"
       }
     }
 
