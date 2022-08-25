@@ -21,7 +21,8 @@ pipeline {
   post { 
         always { 
           echo "Generate Report..."
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './cypress/reports/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Cypress Report'])
+            archive (includes: 'pkg/*.gem')
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './cypress/reports/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'HTML Report'])
           echo "Send Email..."
             emailext( attachLog: true, body: "Please visit ${env.BUILD_URL} for further information", subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #${env.BUILD_NUMBER} - ${env.BUILD_STATUS}", to: "ha.hoang@xpondigital.com")
         }
