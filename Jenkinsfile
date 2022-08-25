@@ -17,6 +17,11 @@ pipeline {
       }
     }
 
+    stage('Generate Report'){
+      steps{
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './cypress/report/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+      }
+    }
   }
 
   post { 

@@ -2,10 +2,19 @@ const { defineConfig } = require("cypress");
 let statusCode
 let body 
 module.exports = defineConfig({
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      charts: true,
+      reportPageTitle: 'SQUAD A -- Smoke Test',
+      embeddedScreenshots: false,
+      inlineAssets: true,
+      saveAllAttempts: false,
+    },
     e2e: {
       excludeSpecPattern: ['*.page.js', 'utils.js', '*.ts'],
       specPattern: 'cypress/e2e/**/*cy.{js,ts}',
-      setupNodeEvents(on, config) { 
+      setupNodeEvents(on, config) {
+        require('cypress-mochawesome-reporter/plugin')(on);
         on('task', {  
             setStatus: (val) => {
               statusCode = val
