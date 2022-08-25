@@ -21,7 +21,7 @@ pipeline {
   post {
         always {
           echo 'Generate Report...'
-      archive(includes: 'pkg/*.gem')
+     
         publishHTML(target : [allowMissing: false,
          alwaysLinkToLastBuild: false,
           keepAll: false,
