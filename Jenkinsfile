@@ -16,16 +16,13 @@ pipeline {
         sh "npx cypress run --headless"
       }
     }
-
-    stage('Generate Report'){
-      steps{
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './cypress/report/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
-      }
-    }
   }
 
   post { 
         always { 
+          echo "Generate Report..."
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './cypress/report/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+          echo "Send Email..."
             emailext( attachLog: true, body: "Please visit ${env.BUILD_URL} for further information", subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #${env.BUILD_NUMBER} - ${env.BUILD_STATUS}", to: "ha.hoang@xpondigital.com")
         }
     }
