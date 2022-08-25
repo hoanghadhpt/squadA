@@ -40,8 +40,8 @@ module.exports = (on, config) => {
       args.webPreferences.additionalArguments = [
         ...(args.webPreferences.additionalArguments || []),
         '--disable-gpu', // Disables GPU hardware acceleration. If software renderer is not in place, then the GPU process won't launch.
-        // '--use-gl=swiftshader', // Select which implementation of GL the GPU process should use. Options are: desktop: whatever desktop OpenGL the user has installed (Linux and Mac default). egl: whatever EGL / GLES2 the user has installed (Windows default - actually ANGLE). swiftshader: The SwiftShader software renderer.
-        // '--override-use-software-gl-for-tests', // Forces the use of software GL instead of hardware gpu.
+        '--use-gl=swiftshader', // Select which implementation of GL the GPU process should use. Options are: desktop: whatever desktop OpenGL the user has installed (Linux and Mac default). egl: whatever EGL / GLES2 the user has installed (Windows default - actually ANGLE). swiftshader: The SwiftShader software renderer.
+        '--override-use-software-gl-for-tests', // Forces the use of software GL instead of hardware gpu.
         '--use-gpu-in-tests', // Use hardware gpu, if available, for tests.
       ];
     }
