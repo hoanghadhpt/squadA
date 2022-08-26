@@ -37,8 +37,17 @@ describe(`Smoke test`, () => {
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
+            it("And Title should not be empty", () =>{
                 pageContentExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
+            })
+            it("And Published Date should not be empty", () =>{
+                if(testData.pageContent === 'page_basic' ) {
+                    cy.log('Not check Published date for this page content')
+                }
+                else{
+                    pageContentExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
+                }
+                  
             })
         })
     })
