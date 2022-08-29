@@ -4,7 +4,7 @@ query {
       ... on Article{
         title
         url
-        #uid
+        mobileHeadline
         publishedDate
         summary
         subbrand{
@@ -48,7 +48,7 @@ query {
       ... on Webinar{
         title
         url
-        uid
+        mobileHeadline
         publishedDate
         summary
         subbrand{
@@ -100,7 +100,7 @@ query {
       ... on Document{
         title
         url
-        uid
+        mobileHeadline
         publishedDate
         summary
         subbrand{
@@ -151,7 +151,7 @@ query {
       ... on Podcast{
         title
         url
-        uid
+        mobileHeadline
         publishedDate
         summary
         subbrand{
@@ -201,7 +201,7 @@ query {
       ... on Slideshow{
         title
         url
-        uid
+        mobileHeadline
         publishedDate
         summary
         subbrand{
@@ -253,7 +253,7 @@ query {
       ... on Video{
         title
         url
-        uid
+        mobileHeadline
         publishedDate
         summary
         subbrand{

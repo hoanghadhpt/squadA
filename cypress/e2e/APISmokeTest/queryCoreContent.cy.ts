@@ -35,10 +35,20 @@ describe(`Smoke test`, () => {
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
+            it("And Title should not be empty", () =>{
                 apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
+            })
+            it("And Mobile headline should not be empty", () =>{
+                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'mobileHeadline');
+            })
+            it("And Published Date should not be empty", () =>{
                 apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
-                
+            })
+            it("And Url should not be empty", () =>{
+                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'url');
+            })
+            it("And Body should not be empty", () =>{
+                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'body');
             })
         })
     })

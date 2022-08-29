@@ -35,5 +35,10 @@
         "contentType": "All SlideShow",
        "queryBody": "CoreContentType/queryAllSlideShows.txt",
         "pageContent": "all_slideshow"
+    },
+     {
+        "contentType": "All External Link",
+       "queryBody": "CoreContentType/queryAllExternalLink.txt",
+        "pageContent": "all_external_link"
     }
 ]

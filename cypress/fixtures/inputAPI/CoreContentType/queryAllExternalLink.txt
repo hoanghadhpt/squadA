@@ -1,21 +1,52 @@
 query {
-  all_article {
+  all_external_link {
     meta {
       total
     }
     items {
-      uid
       title
       mobileHeadline
       url
       publishedDate
       summary
-      body
-      bodyJson
-      updatedAt
-      updatedBy
-      createdAt
-      createdBy
+      externalLink
+      # topicSelector{
+      #   mainTopic{
+      #     __typename
+      #     ... on TopicPrimary{
+      #       title
+      #       url
+      #     }
+      #     ... on TopicSecondary{
+      #       title
+      #       url
+      #     }
+      #     ... on TopicTertiary{
+      #       title
+      #       url
+      #     }
+      #   }
+      #   additionalTopics{
+      #      __typename
+      #     ... on TopicPrimary{
+      #       title
+      #       url
+      #     }
+      #     ... on TopicSecondary{
+      #       title
+      #       url
+      #     }
+      #     ... on TopicTertiary{
+      #       title
+      #       url
+      #     }
+      #   }
+      # }
+      termSelector {
+        primaryTerm
+        primaryTermInRealText
+        secondaryTerm
+      }
       contributor {
         title
         uid
@@ -47,13 +78,24 @@ query {
         featuredImageCredit
         featuredImageCaption
       }
-      atAGlance {
-        shortGlanceVersions
-      }
-      termSelector {
-        primaryTerm
-        primaryTermInRealText
-        secondaryTerm
+      relatedEvents{
+        title
+        url
+        eventDescription
+        eventDetails{
+          startDate
+          endDate
+          location
+          eventUrl
+          eventLogo{
+            logoFile{url}
+            eventLogoAlt
+          }
+        }
+        publishDetails{
+          time
+          locale
+        }
       }
       subbrand {
         title
