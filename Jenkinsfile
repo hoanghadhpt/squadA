@@ -20,7 +20,7 @@ pipeline {
 
   post {
         always {
-          def emailBody = '${SCRIPT, template="regressionfailed.groovy"}'
+          
           echo 'Generate Report...'
             publishHTML(target : [allowMissing: true,
             alwaysLinkToLastBuild: false,keepAll: false,
@@ -30,7 +30,7 @@ pipeline {
             reportTitles: 'HTML Report'])
             
             emailext(attachLog: true,mimeType: 'text/html',
-            body: emailBody, 
+            body: '<h1>Header</h1><h2>Header</h2>', 
             subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #'${env.BUILD_NUMBER}' - ${env.BUILD_STATUS}", 
             to: 'ha.hoang@xpondigital.com')
         }
