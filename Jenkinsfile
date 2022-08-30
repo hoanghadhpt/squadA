@@ -29,8 +29,8 @@ pipeline {
                 reportTitles: 'HTML Report'])
 
           emailext(attachLog: true, mimeType: 'text/html',
-                body: '<h1>Header</h1><h2>Header</h2>',
-                subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #'${env.BUILD_NUMBER}' - ${env.BUILD_STATUS}",
+                body: '<h1>Finished: SUCCESS</h1><h2>There are no errors on this build</h2>',
+                subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #'${env.BUILD_NUMBER}' - Success!",
                 to: 'ha.hoang@xpondigital.com')
         }
         failure {
