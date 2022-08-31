@@ -29,7 +29,7 @@ pipeline {
                 reportTitles: 'HTML Report'])
 
           emailext(attachLog: true, mimeType: 'text/html',
-                body: '<h1>Finished: SUCCESS</h1><h2>There are no errors on this build</h2><h3>Please visit http://152.69.209.1:8080/job/Smoke%20Test/HTML_20Report/ for further information</h3>',
+                body: '<h1>Finished: SUCCESS</h1><h2>----------</h2><h3>Please visit http://152.69.209.1:8080/job/Smoke%20Test/HTML_20Report/ for further information</h3>',
                 subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #'${env.BUILD_NUMBER}' - Success!",
                 to: 'ha.hoang@xpondigital.com, duyen.dao@xpondigital.com')
         }
@@ -43,7 +43,7 @@ pipeline {
                 reportTitles: 'HTML Report'])
 
           emailext(attachLog: true, mimeType: 'text/html',
-                body: '<h1>Finished: Failed</h1><h3>Please visit http://152.69.209.1:8080/job/Smoke%20Test/ for further information</h3>',
+                body: '<h1>Finished: Failed</h1><h3>Please visit http://152.69.209.1:8080/job/Smoke%20Test/HTML_20Report/ for error details</h3>',
                 subject: "[Jenkins][Smoke Test] '${env.JOB_NAME}' #'${env.BUILD_NUMBER}' - Failed!",
                 to: 'ha.hoang@xpondigital.com, duyen.dao@xpondigital.com')
         }
