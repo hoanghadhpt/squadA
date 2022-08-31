@@ -1,0 +1,40 @@
+query{
+  modular_content_spotlight(uid:"bltbd430d2b41e36ca6"){
+    title
+    uid
+    ctaButtonText
+    displayOptions{
+      darkLightToggle
+      textAlignment
+      textPosition
+    }
+    promoLabel
+    promotedContent{
+      __typename
+      ... on Article{
+        title
+        uid
+      }
+      ... on Document{
+        title
+        uid
+      }
+      ... on Podcast{
+        title
+        uid
+      }
+      ... on Slideshow{
+        title
+        uid
+      }
+      ... on Video{
+        title
+        uid
+      }
+      ... on Webinar{
+        title
+        uid
+      }
+    }
+  }
+}

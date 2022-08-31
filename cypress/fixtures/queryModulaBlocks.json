@@ -1,0 +1,28 @@
+[
+   
+    {
+        "contentType": "Modular Content Cards",
+       "queryBody": "ModularBlocks/moduleContentCards.txt",
+        "pageContent": "modular_content_cards"
+    },
+    {
+        "contentType": "Modular Content Spotlight",
+       "queryBody": "ModularBlocks/moduleContentSpotlight.txt",
+        "pageContent": "modular_content_spotlight"
+    },
+    {
+        "contentType": "Modular Event Promo",
+       "queryBody": "ModularBlocks/moduleEventPromo.txt",
+        "pageContent": "modular_event_promo"
+    },
+    {
+        "contentType": "Modular External Link",
+       "queryBody": "ModularBlocks/moduleExternalLink.txt",
+        "pageContent": "modular_external_link"
+    },
+    {
+        "contentType": "Modular Newsletter Promo",
+       "queryBody": "ModularBlocks/moduleNewsletterPromo.txt",
+        "pageContent": "modular_newsletter_promo"
+    }
+]

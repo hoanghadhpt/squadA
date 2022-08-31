@@ -1,0 +1,46 @@
+query{
+  modular_event_promo(uid:"blt54669b03ec2aa1eb"){
+    title
+    uid
+    background{
+      backgroundColor
+      backgroundImage{url}
+      backgroundImageAltText
+    }
+    event{
+      title
+      contentTypeUid
+      eventDescription
+      eventDetails{
+        button1Link
+        button1Name
+        button2Link
+        button2Name
+        endDate
+        eventLogo{
+          eventLogoAlt
+          logoFile{url}
+        }
+        eventType
+        eventUrl
+        location
+        startDate
+      }
+      locale
+      publishDetails{
+        locale
+        time
+      }
+      relatedInlineContent{
+        relatedItem{
+          __typename
+          ... on Article{
+            title
+          }
+        }
+      }
+      
+    }
+    locale
+  }
+}

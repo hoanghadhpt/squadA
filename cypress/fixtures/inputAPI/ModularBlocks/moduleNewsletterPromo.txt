@@ -1,0 +1,14 @@
+query{
+  modular_newsletter_promo(uid:"bltab11c37a0604abb2"){
+    ctaButton{
+      ctaButtonText
+      ctaButtonUrl{
+        href
+        title
+      }
+    }
+    ctaMessage
+    title
+    uid
+  }
+}

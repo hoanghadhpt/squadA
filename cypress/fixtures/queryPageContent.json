@@ -8,5 +8,20 @@
         "contentType": "Page Content",
        "queryBody": "PageContent/pageContent.txt",
         "pageContent": "page_content"
+    },
+    {
+        "contentType": "Page Webinar",
+       "queryBody": "PageContent/pageWebinar.txt",
+        "pageContent": "page_webinars"
+    },
+    {
+        "contentType": "Page Videos",
+       "queryBody": "PageContent/pageVideos.txt",
+        "pageContent": "page_videos"
+    },
+    {
+        "contentType": "Page Slideshow",
+       "queryBody": "PageContent/pageSlideshow.txt",
+        "pageContent": "page_slideshows"
     }
 ]

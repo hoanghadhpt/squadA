@@ -66,6 +66,11 @@ class ApiShareObjects {
         })
         
     }
+    verifyNoError(contentType: string){
+        cy.task('getBody').then( resBody => { 
+                expect(resBody).not.has.property('errors')                
+        })  
+    }
 
 }
 
