@@ -1,0 +1,82 @@
+query {
+  page_whitepapers {
+    meta {
+      pagination {
+        limit
+        page
+        total
+        totalPage
+      }
+    }
+    items {
+      title
+      uid
+      atAGlance {
+        shortGlanceVersions
+      }
+      body
+      bodyJson
+      contentFormat {
+        title
+      }
+      contentTypeUid
+      contributor {
+        contributorName
+        contributorImage {
+          image {
+            url
+          }
+          imageAltText
+        }
+      }
+      featuredImageGroup {
+        featuredImage {
+          url
+        }
+        featuredImageCaption
+        featuredImageCredit
+        imageAltText
+      }
+			
+      keywords {
+        contentTypeUid
+        title
+        url
+      }
+      locale
+      mobileHeadline
+      publishedDate
+      readTime
+      relatedEvents {
+        contentTypeUid
+        title
+      }
+      relatedInlineContent {
+        relatedItem {
+          __typename
+        }
+      }
+      seo {
+        canonicalUrl
+        metaDescription
+        metaTitle
+        noIndex
+      }
+			document{
+        materialMultiple{
+          url
+        }
+        materialResource{
+          url
+        }
+        materialTitle
+        materialUrl
+      }
+      summary
+      seriesTaxonomy {
+        title
+        url
+      }
+    }
+  }
+}
