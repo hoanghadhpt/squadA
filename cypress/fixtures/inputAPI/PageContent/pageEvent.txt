@@ -1,0 +1,137 @@
+# Write your query or mutation here
+query {
+  page_event (
+    limit:10
+    page:1
+    where:{
+      url:"/events/event-test-url"
+    }
+  ){
+    meta {
+      pagination {
+        page
+        limit
+        total
+        totalPage
+      }
+      entry {
+        title
+        eventDescription
+        eventDetails{
+          eventLogo{logoFile{url}}
+          eventUrl
+          button1Link
+          button1Name
+          button2Link
+          button2Name
+          startDate
+          endDate
+          location
+        }
+        uid
+      }
+    }
+    items {
+      #__typename
+      ... on Article {
+        title
+        url
+        mobileHeadline
+        summary
+        body
+        termSelector{
+          primaryTerm
+        }
+        publishedDate
+        #__typename
+      }
+      ... on Document {
+        title
+        url
+         mobileHeadline
+        summary
+        body
+        termSelector{
+          primaryTerm
+        }
+        publishedDate
+        __typename
+      }
+      ... on Podcast {
+        title
+        url
+         mobileHeadline
+        summary
+        body
+        termSelector{
+          primaryTerm
+        }
+        # publishedDate
+        __typename
+      }
+      ... on Video {
+        title
+        url
+         mobileHeadline
+        summary
+        body
+        termSelector{
+          primaryTerm
+        }
+        publishedDate
+        __typename
+      }
+      ... on Slideshow {
+        title
+        url
+         mobileHeadline
+        summary
+        body
+        termSelector{
+          primaryTerm
+        }
+        publishedDate
+        __typename
+      }
+      ... on Webinar {
+        title
+        url
+         mobileHeadline
+        summary
+        body
+        termSelector{
+          primaryTerm
+        }
+        publishedDate
+        __typename
+      }
+        ... on Event {
+        title
+        url
+          eventDescription
+        eventDetails{
+          startDate
+          endDate
+          location
+          eventLogo{
+            __typename
+            logoFile{url}
+            eventLogoAlt
+          }
+        }
+        __typename
+      }
+      ... on ExternalLink{
+        title
+        mobileHeadline
+        publishedDate
+        url
+        summary
+        externalLink
+        termSelector{
+          primaryTerm
+        }
+      }
+    }
+  }
+}

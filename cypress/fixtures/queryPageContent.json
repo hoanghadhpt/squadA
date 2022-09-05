@@ -33,5 +33,10 @@
         "contentType": "Page Podcast",
        "queryBody": "PageContent/pagePodcast.txt",
         "pageContent": "page_podcasts"
+    },
+    {
+        "contentType": "Page Event",
+       "queryBody": "PageContent/pageEvent.txt",
+        "pageContent": "page_podcasts"
     }
 ]
