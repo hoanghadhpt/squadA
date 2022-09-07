@@ -1,62 +1,39 @@
 query{
-  modular_external_link(uid:"bltc5432188188a4a0d"){
+  modular_external_link(uid:"blt4833a03e3a8f01b4"){
+    title
     contentTypeUid
     ctaButton{
       ctaButtonText
       ctaButtonUrl
+      __typename
     }
     externalLinks{
       contentFormat{
-        contentTypeUid
-        pageDescription
+        title
       }
       contentTypeUid
       contributor{
         contributorName
-        contributorImage{
-          image{url}
-          imageAltText
-        }
       }
       externalLink
       featuredImageGroup{
         featuredImage{url}
-        imageAltText
         featuredImageCaption
         featuredImageCredit
+        imageAltText
       }
       keywords{
-        contentTypeUid
-        url
         title
+        url
       }
-      locale
-      mobileHeadline
       publishedDate
-      seriesTaxonomy {
-        branding{
-          color
-          logo{url}
-          logoAltText
-          tagline
-        }
-        displayOptions
-        title
-        url
+      seo{
+        canonicalUrl
+        metaDescription
+        metaTitle
+        noIndex
       }
-      subbrand{
-        title
-      }
-      summary
-      termSelector{
-        primaryTerm
-        secondaryTerm
-      }
-      title
-      uid
-      url
     }
     moduleLabel
-    title
   }
 }
