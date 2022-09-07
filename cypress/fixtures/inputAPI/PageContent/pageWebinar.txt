@@ -29,7 +29,7 @@ query{
         featuredImageCredit
         imageAltText
       }
-      gating{
+      sponsorshipGatingGroup{
         sponsorshipGatingCampaignUrl
         sponsorshipGatingExternalFormId
         sponsorshipGatingGateExternalFieldFlag

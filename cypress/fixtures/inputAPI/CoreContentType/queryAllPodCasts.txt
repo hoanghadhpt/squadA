@@ -1,5 +1,5 @@
 query {
-  all_podcast{
+  all_podcast {
     meta {
       total
     }
@@ -21,7 +21,7 @@ query {
         title
         contributorDescription
         contributorName
-   			url
+        url
         contributorRole
         contributorImage {
           image {
@@ -49,12 +49,33 @@ query {
       atAGlance {
         shortGlanceVersions
       }
-      termSelector {
-        historyOfPrimaryTerm
-        primaryTerm
-        primaryTermInRealText
-        primaryCategoryBelonged
-        secondaryTerm
+      topicSelector {
+        mainTopic {
+          __typename
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
       }
       keywords {
         keywordBranding {
@@ -86,9 +107,7 @@ query {
           ... on Article {
             uid
 
-
             url
-   
 
             contributor {
               title
@@ -112,7 +131,6 @@ query {
               featuredImageCredit
               featuredImageCaption
             }
-
           }
           ... on Webinar {
             title
@@ -139,12 +157,33 @@ query {
               featuredImageCredit
               featuredImageCaption
             }
-            termSelector {
-              historyOfPrimaryTerm
-              primaryTerm
-              primaryTermInRealText
-              primaryCategoryBelonged
-              secondaryTerm
+            topicSelector {
+              mainTopic {
+                __typename
+                ... on TopicPrimary {
+                  title
+                  url
+                }
+                ... on TopicSecondary {
+                  title
+                  url
+                }
+                ... on TopicTertiary {
+                  title
+                  url
+                }
+              }
+              additionalTopics {
+                ... on TopicPrimary {
+                  title
+                }
+                ... on TopicSecondary {
+                  title
+                }
+                ... on TopicTertiary {
+                  title
+                }
+              }
             }
             webinarGroup {
               webinarId
@@ -194,12 +233,33 @@ query {
             atAGlance {
               shortGlanceVersions
             }
-            termSelector {
-              historyOfPrimaryTerm
-              primaryTerm
-              primaryTermInRealText
-              primaryCategoryBelonged
-              secondaryTerm
+            topicSelector {
+              mainTopic {
+                __typename
+                ... on TopicPrimary {
+                  title
+                  url
+                }
+                ... on TopicSecondary {
+                  title
+                  url
+                }
+                ... on TopicTertiary {
+                  title
+                  url
+                }
+              }
+              additionalTopics {
+                ... on TopicPrimary {
+                  title
+                }
+                ... on TopicSecondary {
+                  title
+                }
+                ... on TopicTertiary {
+                  title
+                }
+              }
             }
           }
           ... on BasicPage {
@@ -217,12 +277,14 @@ query {
           }
         }
       }
- 		podcast{
-      duration{duration}
-      podcastId
-      podcastLink
-      podcastService
-    }
+      podcast {
+        duration {
+          duration
+        }
+        podcastId
+        podcastLink
+        podcastService
+      }
     }
   }
 }

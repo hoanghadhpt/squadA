@@ -4,7 +4,7 @@ query {
   	page: 1
   	sort: newest
     where:{
-      url:"/c-h-i-hoan"
+      url:"/subbrand"
     }
   ){
     items {

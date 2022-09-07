@@ -31,20 +31,28 @@ describe(`Query Modular Blocks`, () => {
         it("Then I expected status code as 200", () => {
           apiExpected.verifyStatus(200);
         });
-        if (testData.pageContent !== "modular_content_spotlight" && testData.pageContent !== "modular_event_promo" && testData.pageContent !== "modular_newsletter_promo" ) {
+        if (
+          testData.pageContent !== "modular_content_spotlight" &&
+          testData.pageContent !== "modular_event_promo" &&
+          testData.pageContent !== "modular_newsletter_promo"
+        ) {
           it("And the items list should be not null", () => {
             apiExpected.verifyBodyNotNull(testData.pageContent);
           });
 
           it("And Required Field should not be empty", () => {
-            apiExpected.verifyRequiredFieldNotNull(testData.pageContent, "title");
+            apiExpected.verifyRequiredFieldNotNull(
+              testData.pageContent,
+              "title"
+            );
           });
         }
 
         it("And query not return error", () => {
-            apiExpected.verifyNoError(testData.pageContent);
-          });
+          apiExpected.verifyNoError(testData.pageContent);
+        });
 
+        
       });
     });
   });

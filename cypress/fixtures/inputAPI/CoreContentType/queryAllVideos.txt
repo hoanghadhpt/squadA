@@ -16,7 +16,34 @@ query {
       updatedBy
       createdAt
       createdBy
-
+			topicSelector {
+        mainTopic {
+          __typename
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
       contributor {
         title
    
@@ -47,13 +74,7 @@ query {
       atAGlance {
         shortGlanceVersions
       }
-      termSelector {
-        historyOfPrimaryTerm
-        primaryTerm
-        primaryTermInRealText
-        primaryCategoryBelonged
-        secondaryTerm
-      }
+
       keywords {
         keywordBranding {
           keywordBrandingLogo {
@@ -137,13 +158,7 @@ query {
               featuredImageCredit
               featuredImageCaption
             }
-            termSelector {
-              historyOfPrimaryTerm
-              primaryTerm
-              primaryTermInRealText
-              primaryCategoryBelonged
-              secondaryTerm
-            }
+
             webinarGroup {
               webinarId
               webinarUrl
@@ -192,13 +207,7 @@ query {
             atAGlance {
               shortGlanceVersions
             }
-            termSelector {
-              historyOfPrimaryTerm
-              primaryTerm
-              primaryTermInRealText
-              primaryCategoryBelonged
-              secondaryTerm
-            }
+
           }
           ... on BasicPage {
             uid

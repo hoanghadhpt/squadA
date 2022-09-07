@@ -37,6 +37,6 @@
     {
         "contentType": "Page Event",
        "queryBody": "PageContent/pageEvent.txt",
-        "pageContent": "page_podcasts"
+        "pageContent": "page_event"
     }
 ]

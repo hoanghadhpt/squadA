@@ -40,6 +40,9 @@ describe(`Smoke test`, () => {
             it("And Required Field should not be empty", () =>{
                 pageContentExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
             })
+            it("And query not return error", () => {
+                apiExpected.verifyNoError(testData.pageContent);
+              });
         })
     })
     

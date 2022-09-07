@@ -40,6 +40,9 @@ describe(`Smoke test`, () => {
                 apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
                 
             })
+            it("And query not return error", () => {
+                apiExpected.verifyNoError(testData.pageContent);
+              });
         })
     })
     

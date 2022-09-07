@@ -1,9 +1,8 @@
-# Write your query or mutation here
 query pageContributor {
   page_contributor(limit: 5
     sort: newest
     
-    where: { url: "/author/denzel-washington" })
+    where: { url: "/author/industry-voice-by-unified-ag-solutions-uas" })
     # where:{url:"/author/test"})
   {
     meta {
