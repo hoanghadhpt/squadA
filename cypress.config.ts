@@ -36,10 +36,18 @@ module.exports = defineConfig({
       baseUrl: "https://content.preview.scm.informagt.com",
       masterAPI : "/v1/graphql?client_id=master",
       farmprogressAPI: "/v1/graphql?client_id=farmprogress",
+<<<<<<< HEAD
       scmDemoAPI: "/v1/graphql?client_id=scmdemo"
     },
     "video": false,
     "screenshotOnRunFailure": false
+=======
+      scmDemoAPI: "/v1/graphql?client_id=scmdemo",
+      api_key: "bltace826a255a35e75", // content stack uid
+      authtoken: "blte3b3bec3b2902ef6" // user login auth token
+    }
+      
+>>>>>>> prepareData
     },
   },
   {

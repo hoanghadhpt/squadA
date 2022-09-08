@@ -1,5 +1,6 @@
+import cypress from "cypress"
 
-export const apiPost = new class APIPost {
+class APIPost {
 
     updateEntry(entry: any, uid: any, body: any) {
         cy.request({
@@ -68,24 +69,14 @@ export const apiPost = new class APIPost {
             cy.wrap(res.status).as('status');
             cy.wrap(res.headers).as('headers');
             cy.wrap(res.body).as('body');
-
+            cy.wrap(res).as('resBody');
             // res.body.entry['uid']
             // write to file
             cy.log(entry)
-            if (entry === 'keyword') {
-                cy.writeFile('./cypress/fixtures/inputAPI/uids/keywords.txt', res.body.entry['uid'])
-            }
-            if (entry === 'contributor') {
-                cy.writeFile('./cypress/fixtures/inputAPI/uids/contributor.txt', res.body.entry['uid'])
-            }
-            if (entry === 'subbrand') {
-                cy.writeFile('./cypress/fixtures/inputAPI/uids/subbranch.txt', res.body.entry['uid'])
-            }
-            if (entry === 'content_format') {
-                cy.writeFile('./cypress/fixtures/inputAPI/uids/contentformat.txt', res.body.entry['uid'])
-            }
+            
+                cy.writeFile('./cypress/fixtures/sampleData/entryUID/'+entry+'.txt', res.body.entry['uid'])
 
-        }).as('req');
+        });
     }
 
 
@@ -189,3 +180,5 @@ export const apiPost = new class APIPost {
         }).as('graphreq');
     }
 }
+
+export default APIPost

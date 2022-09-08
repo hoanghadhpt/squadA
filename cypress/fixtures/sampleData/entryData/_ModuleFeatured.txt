@@ -1,0 +1,26 @@
+{
+    "entry": {
+    "featured_content": [
+        {
+            "uid": "blt495262dc35f6fbbd",
+            "_content_type_uid": "webinar"
+        }
+    ],
+    "module_display_option": "recent",
+    "recent_section": {
+        "cta_button": {
+            "cta_button_link": [],
+            "cta_button_text": ""
+        },
+        "dynamic_recent_content": {
+            "by_content_format": [],
+            "by_content_type": [],
+            "by_keyword": [],
+            "by_series": [],
+            "by_topics": []
+        },
+        "section_label": "abc"
+    },
+    "tags": [],
+    "title": "[Automation Test] Module Featured"
+}}

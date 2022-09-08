@@ -1,9 +1,14 @@
 {
   "devDependencies": {
+<<<<<<< HEAD
     "cypress": "^10.0.0",
     "cypress-mochawesome-reporter": "^3.2.2",
     "cypress-multi-reporters": "^1.6.1",
     "mocha-junit-reporter": "^2.0.2",
     "typescript": "*"
+=======
+    "cypress": "^10.6.0",
+    "typescript": "^4.7.4"
+>>>>>>> prepareData
   }
 }
