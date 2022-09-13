@@ -10,42 +10,37 @@ query {
       publishedDate
       summary
       externalLink
-      # topicSelector{
-      #   mainTopic{
-      #     __typename
-      #     ... on TopicPrimary{
-      #       title
-      #       url
-      #     }
-      #     ... on TopicSecondary{
-      #       title
-      #       url
-      #     }
-      #     ... on TopicTertiary{
-      #       title
-      #       url
-      #     }
-      #   }
-      #   additionalTopics{
-      #      __typename
-      #     ... on TopicPrimary{
-      #       title
-      #       url
-      #     }
-      #     ... on TopicSecondary{
-      #       title
-      #       url
-      #     }
-      #     ... on TopicTertiary{
-      #       title
-      #       url
-      #     }
-      #   }
-      # }
-      termSelector {
-        primaryTerm
-        primaryTermInRealText
-        secondaryTerm
+      topicSelector{
+        mainTopic{
+          __typename
+          ... on TopicPrimary{
+            title
+            url
+          }
+          ... on TopicSecondary{
+            title
+            url
+          }
+          ... on TopicTertiary{
+            title
+            url
+          }
+        }
+        additionalTopics{
+           __typename
+          ... on TopicPrimary{
+            title
+            url
+          }
+          ... on TopicSecondary{
+            title
+            url
+          }
+          ... on TopicTertiary{
+            title
+            url
+          }
+        }
       }
       contributor {
         title
