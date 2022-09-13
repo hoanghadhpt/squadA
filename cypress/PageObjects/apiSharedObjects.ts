@@ -37,23 +37,21 @@ class ApiShareObjects {
             })  
         })  
     }
+    verifyRequiredFieldNotNullByTask(contentType: string, requiredField: string){
+        cy.task('getBody').then(resBody =>{          
+            const itemsArr = resBody.data[contentType].items;
+            itemsArr.forEach(item => {
+                if(contentType === 'all_event' && requiredField === 'publishedDate') {
+                    expect(item).not.have.property(requiredField)
+                }
+                else{
+                    expect(item).property(requiredField).not.null
+                }
+            }) 
+        })
+    }
     verifyRequiredFieldNotNull(contentType: string, requiredField: string){
-        cy.task('getBody').then(resBody =>{    
-            /** 
-            cy.wrap(resBody.data).its(contentType).then((pageData) =>{
-                cy.wrap(pageData.items).as('itemList')
-                cy.log(typeof '@itemList')
-                cy.get('@itemList').each(element =>{
-                    if(contentType === 'all_event' && requiredField === 'publishedDate') {
-                        expect(element).not.have.property(requiredField)
-                    }
-                    else{
-                        expect(element).property(requiredField).not.null
-                    }
-                })
-                 
-            }) */
-            
+        cy.get('body').then(resBody =>{          
             const itemsArr = resBody.data[contentType].items;
             itemsArr.forEach(item => {
                 if(contentType === 'all_event' && requiredField === 'publishedDate') {
@@ -65,8 +63,9 @@ class ApiShareObjects {
             }) 
         })
         
+        
     }
 
 }
 
-export default ApiShareObjects
+export default new ApiShareObjects()

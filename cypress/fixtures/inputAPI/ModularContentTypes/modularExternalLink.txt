@@ -1,0 +1,55 @@
+query {
+  modular_external_link(uid: "blt4833a03e3a8f01b4") {
+    title
+    contentTypeUid
+    moduleLabel
+    ctaButton {
+      ctaButtonUrl
+      ctaButtonText
+    }
+    externalLinks {
+      title
+      summary
+      publishedDate
+      mobileHeadline
+      subbrand {
+        title
+        url
+      }
+      keywords {
+        title
+        url
+      }
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+query EventPromoModular {
+  modular_event_promo(uid:"bltbf94f850b0de1f5a") {
+      title
+      uid
+      background{
+        backgroundImageAltText
+        backgroundImage{url}
+      }
+    event{
+      title
+      url
+      eventDetails{
+        endDate
+        startDate
+        location
+        eventUrl
+        eventLogo{
+          eventLogoAlt
+          logoFile{url}
+        }
+        buttons{
+          buttonLink
+          buttonName
+        }
+      }
+    }
+    }
+}

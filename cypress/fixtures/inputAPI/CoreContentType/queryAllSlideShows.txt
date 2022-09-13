@@ -40,8 +40,8 @@ query {
         url
         locale
       }
-      slideshow{
-        slideImage{
+      slideshow {
+        slideImage {
           url
         }
         slideTitle
@@ -60,12 +60,35 @@ query {
       atAGlance {
         shortGlanceVersions
       }
-      termSelector {
-        historyOfPrimaryTerm
-        primaryTerm
-        primaryTermInRealText
-        primaryCategoryBelonged
-        secondaryTerm
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
       }
       subbrand {
         title

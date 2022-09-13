@@ -1,0 +1,265 @@
+query {
+  modular_content_cards(where: { uid: "blte2054147ff52d686" }) {
+    meta {
+      total
+
+      entry {
+        title
+        __typename
+        settingOption
+        contentDisplayOption
+        contentTypeUid
+
+        dynamicRecentContent {
+          __typename
+          byTopics {
+            __typename
+            ... on TopicBase {
+              title
+              contentTypeUid
+              url
+            }
+          }
+          byKeywords {
+            title
+            url
+            __typename
+            keywordDescription
+            keywordDisplayOptions
+          }
+          byContentTypes
+          byContentFormat {
+            title
+            contentTypeUid
+            pageDescription
+            url
+          }
+        }
+        manualCuratedContentGroup {
+          __typename
+          manualCuratedContent {
+            __typename
+            uid
+          }
+          manualCuratedContentLimit
+        }
+      }
+    }
+    items {
+      __typename
+      ... on Article {
+        title
+        uid
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+        contributor {
+          contributorName
+        }
+        topicSelector{
+          mainTopic{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+          additionalTopics{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+      ... on Document {
+        title
+        uid
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+         topicSelector{
+          mainTopic{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+          additionalTopics{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+      ... on Webinar {
+        title
+        url
+        uid
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+         topicSelector{
+          mainTopic{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+          additionalTopics{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+      ... on Slideshow {
+        title
+        url
+        uid
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+         topicSelector{
+          mainTopic{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+          additionalTopics{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+      ... on Podcast {
+        title
+        url
+        uid
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+         topicSelector{
+          mainTopic{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+          additionalTopics{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+      ... on Video {
+        title
+        url
+        uid
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        contentTypeUid
+        contentFormat {
+          title
+          pageDescription
+        }
+         topicSelector{
+          mainTopic{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+          additionalTopics{
+            ... on TopicPrimary{title}
+            ... on TopicSecondary{title}
+            ... on TopicTertiary{title}
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+    }
+  }
+}

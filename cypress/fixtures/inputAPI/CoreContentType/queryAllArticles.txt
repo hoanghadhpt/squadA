@@ -50,10 +50,40 @@ query {
       atAGlance {
         shortGlanceVersions
       }
+<<<<<<< Updated upstream
       termSelector {
         primaryTerm
         primaryTermInRealText
         secondaryTerm
+=======
+      topicSelector {
+        mainTopic {
+          __typename
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+>>>>>>> Stashed changes
       }
       subbrand {
         title

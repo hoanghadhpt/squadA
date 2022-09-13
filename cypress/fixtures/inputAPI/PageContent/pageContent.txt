@@ -1,302 +1,342 @@
 query {
-  page_content(url:"/crops/the-licensing-mixtape-s3-e3-influencer-hyram-yarbro-on-breaking-the-beauty-market"){
-    content{
-      ... on Article{
+  page_content(url: "/commentary/how-one-man-became-a-farmer") {
+    content {
+      ... on Article {
         title
         url
+<<<<<<< Updated upstream
         mobileHeadline
+=======
+
+>>>>>>> Stashed changes
         publishedDate
         summary
-        subbrand{
-          title
-          uid
-          url
-          subbrandLogoGroup{
-            subbrandImage{url}
-            subbrandImageAltText
+        bodyJson
+        topicSelector {
+          mainTopic {
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
           }
         }
-        body
-        bodyJson
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
-        seriesTaxonomy{
+        keywords {
           title
           url
         }
-        keywords{
-          title
-          uid
-          contentTypeUid
-          url
-        }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCredit
-          featuredImageCaption
-        }
-        seo{
-          metaTitle
-          metaDescription
-          canonicalUrl
-          noIndex
-        }
-      }
-      ... on Webinar{
-        title
-        url
-        mobileHeadline
-        publishedDate
-        summary
-        subbrand{
-          title
-          uid
-          url
-          subbrandLogoGroup{
-            subbrandImage{url}
-            subbrandImageAltText
-          }
-        }
-        body
-        bodyJson
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
-        seriesTaxonomy{
-          title
-          url
-        }
-        keywords{
-          title
-          uid
-          contentTypeUid
-          url
-        }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCredit
-          featuredImageCaption
-        }
-        seo{
-          metaTitle
-          metaDescription
-          canonicalUrl
-          noIndex
-        }
-        webinarGroup{
-          duration{duration}
-          webinarId
-          webinarUrl
-          webinarService
-          webinarTimezone
-          webinarStartDateAndTime
-        }
-      } 
-      ... on Document{
-        title
-        url
-        mobileHeadline
-        publishedDate
-        summary
-        subbrand{
-          title
-          uid
-          url
-          subbrandLogoGroup{
-            subbrandImage{url}
-            subbrandImageAltText
-          }
-        }
-        body
-        bodyJson
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
-        seriesTaxonomy{
-          title
-          url
-        }
-        keywords{
-          title
-          uid
-          contentTypeUid
-          url
-        }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCredit
-          featuredImageCaption
-        }
-        seo{
-          metaTitle
-          metaDescription
-          canonicalUrl
-          noIndex
-        }
-        document{
-          materialTitle
-          materialUrl
-          materialResource{
+        featuredImageGroup {
+          featuredImage {
             url
           }
-        }
-      }
-      ... on Podcast{
-        title
-        url
-        mobileHeadline
-        publishedDate
-        summary
-        subbrand{
-          title
-          uid
-          url
-          subbrandLogoGroup{
-            subbrandImage{url}
-            subbrandImageAltText
-          }
-        }
-        body
-        bodyJson
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
-        seriesTaxonomy{
-          title
-          url
-        }
-        keywords{
-          title
-          uid
-          contentTypeUid
-          url
-        }
-        featuredImageGroup{
-          featuredImage{url}
           featuredImageCredit
-          featuredImageCaption
         }
-        seo{
+        seo {
           metaTitle
           metaDescription
           canonicalUrl
           noIndex
         }
-        podcast{
-          podcastId
-          podcastLink
-          podcastService
-          duration{duration}
-        }
       }
-      ... on Slideshow{
+      ... on Webinar {
         title
         url
+<<<<<<< Updated upstream
         mobileHeadline
+=======
+>>>>>>> Stashed changes
         publishedDate
         summary
-        subbrand{
-          title
-          uid
-          url
-          subbrandLogoGroup{
-            subbrandImage{url}
-            subbrandImageAltText
+        bodyJson
+        topicSelector {
+          mainTopic {
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
           }
         }
-        body
-        bodyJson
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
-        seriesTaxonomy{
+        keywords {
           title
           url
         }
-        keywords{
-          title
-          uid
-          contentTypeUid
-          url
-        }
-        featuredImageGroup{
-          featuredImage{url}
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
           featuredImageCredit
-          featuredImageCaption
         }
-        seo{
+        seo {
           metaTitle
           metaDescription
           canonicalUrl
           noIndex
         }
-        slideshow{
-          slideTitle
-          slideImage{url}
-          slideImageCredit
-          slideImageAltText
-          slideImageCaption
-          slideImageDescription
+        webinarGroup {
+          duration {
+            duration
+          }
+          webinarUrl
+          webinarStartDateAndTime
         }
       }
-      ... on Video{
+      ... on Document {
         title
         url
+<<<<<<< Updated upstream
         mobileHeadline
+=======
+>>>>>>> Stashed changes
         publishedDate
         summary
-        subbrand{
-          title
-          uid
-          url
-          subbrandLogoGroup{
-            subbrandImage{url}
-            subbrandImageAltText
+        bodyJson
+        topicSelector {
+          mainTopic {
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
           }
         }
-        body
-        bodyJson
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
-        seriesTaxonomy{
+        keywords {
           title
           url
         }
-        keywords{
-          title
-          uid
-          contentTypeUid
-          url
-        }
-        featuredImageGroup{
-          featuredImage{url}
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
           featuredImageCredit
-          featuredImageCaption
         }
-        seo{
+        seo {
           metaTitle
           metaDescription
           canonicalUrl
           noIndex
         }
-        video{
-          duration{duration}
-          videoUrl
-          videoCredit
+      }
+      ... on Podcast {
+        title
+        url
+<<<<<<< Updated upstream
+        mobileHeadline
+=======
+>>>>>>> Stashed changes
+        publishedDate
+        summary
+        bodyJson
+        topicSelector {
+          mainTopic {
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+        keywords {
+          title
+          url
+        }
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+        }
+        seo {
+          metaTitle
+          metaDescription
+          canonicalUrl
+          noIndex
+        }
+      }
+      ... on Slideshow {
+        title
+        url
+<<<<<<< Updated upstream
+        mobileHeadline
+=======
+>>>>>>> Stashed changes
+        publishedDate
+        summary
+        bodyJson
+        topicSelector {
+          mainTopic {
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+        keywords {
+          title
+          url
+        }
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+        }
+        seo {
+          metaTitle
+          metaDescription
+          canonicalUrl
+          noIndex
+        }
+      }
+      ... on Video {
+        title
+        url
+<<<<<<< Updated upstream
+        mobileHeadline
+=======
+>>>>>>> Stashed changes
+        publishedDate
+        summary
+        bodyJson
+        topicSelector {
+          mainTopic {
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+        keywords {
+          title
+          url
+        }
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+        }
+        seo {
+          metaTitle
+          metaDescription
+          canonicalUrl
+          noIndex
         }
       }
     }

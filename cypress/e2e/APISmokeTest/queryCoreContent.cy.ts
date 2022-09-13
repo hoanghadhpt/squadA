@@ -10,7 +10,7 @@ describe(`Smoke test`, () => {
         
       })
     const queryGraphql = new queryPageContent()
-    const apiExpected = new ApiShareObjects()
+    // const apiExpected = new ApiShareObjects()
     const testData = require("../../fixtures/queryCoreContentTypes.json");
     describe("Query page content", () => {
         testData.forEach((testDataRow: any) => {
@@ -19,22 +19,26 @@ describe(`Smoke test`, () => {
                 queryBody: testDataRow.queryBody,
                 pageContent: testDataRow.pageContent
             };
+            
         context(`Query page content: ${testData.contentType}`, ()=>{ 
+          
             it(`Given I send the graphql query for ${testData.contentType} `, () =>{
                 queryGraphql.queryPageContentApi('masterAPI', testData.queryBody)
                 cy.get('@resBody').then(resBody => {
                     cy.task('setStatus', resBody.status);
                     cy.task('setBody', resBody.body)
                  });
+                
+               
             })
-        
             it("Then I expected status code as 200", ()=>{
-                apiExpected.verifyStatus(200 ) 
+                ApiShareObjects.verifyStatus(200 ) 
             })
             
             it("And the items list should be not null", () =>{
-                apiExpected.verifyBodyNotNull(testData.pageContent)     
+                ApiShareObjects.verifyBodyNotNull(testData.pageContent)     
             })
+<<<<<<< Updated upstream
             it("And Title should not be empty", () =>{
                 apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
             })
@@ -49,7 +53,15 @@ describe(`Smoke test`, () => {
             })
             it("And Body should not be empty", () =>{
                 apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'body');
+=======
+            it("And Required Field should not be empty", () =>{
+                ApiShareObjects.verifyRequiredFieldNotNullByTask(testData.pageContent, 'title');
+                ApiShareObjects.verifyRequiredFieldNotNullByTask(testData.pageContent, 'publishedDate');
+                
+>>>>>>> Stashed changes
             })
+        
+           
         })
     })
     

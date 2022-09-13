@@ -1,0 +1,396 @@
+query {
+  modular_featured_latest(uid: "blt71864c3fe8030df9") {
+    latest {
+      __typename
+      ... on Article {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+        }
+        topicSelector {
+          mainTopic {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+      }
+      ... on Document {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+        }
+        topicSelector {
+          mainTopic {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+      }
+      ... on Webinar {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+        }
+        topicSelector {
+          mainTopic {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+        keywords {
+          title
+          url
+        }
+      }
+      ... on Slideshow {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+        }
+        topicSelector {
+          mainTopic {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+          additionalTopics {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+      }
+      ... on Podcast {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+          featuredImageCredit
+          featuredImageCaption
+        }
+        topicSelector {
+          mainTopic {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+      }
+      ... on Video {
+        title
+        url
+        summary
+        publishedDate
+        featuredImageGroup {
+          featuredImage {
+            url
+          }
+        }
+        topicSelector {
+          mainTopic {
+            ... on TopicPrimary {
+              title
+            }
+            ... on TopicSecondary {
+              title
+            }
+            ... on TopicTertiary {
+              title
+            }
+          }
+        }
+      }
+    }
+     featured {
+    __typename
+    ... on Article {
+      title
+      url
+      summary
+      publishedDate
+      featuredImageGroup {
+        featuredImage {
+          url
+        }
+      }
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
+    }
+    ... on Document {
+      title
+      url
+      summary
+      publishedDate
+      featuredImageGroup {
+        featuredImage {
+          url
+        }
+      }
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
+    }
+    ... on Webinar {
+      title
+      url
+      summary
+      publishedDate
+      featuredImageGroup {
+        featuredImage {
+          url
+        }
+      }
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
+      keywords {
+        title
+        url
+      }
+    }
+    ... on Slideshow {
+      title
+      url
+      summary
+      publishedDate
+      featuredImageGroup {
+        featuredImage {
+          url
+        }
+      }
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
+    }
+    ... on Podcast {
+      title
+      url
+      summary
+      publishedDate
+      featuredImageGroup {
+        featuredImage {
+          url
+        }
+        featuredImageCredit
+        featuredImageCaption
+      }
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
+    }
+    ... on Video {
+      title
+      url
+      summary
+      publishedDate
+      topicSelector {
+        mainTopic {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
+      }
+    }
+  }
+  # Resolver field
+  meta {
+    total
+    entry {
+      title
+      uid
+      recentSection {
+        ctaButton {
+          ctaButtonText
+          ctaButtonUrl
+        }
+        dynamicRecentContent {
+          byContentFormat {
+            contentTypeUid
+            uid
+          }
+          byContentTypes
+          byKeyword {
+            uid
+            url
+          }
+          bySeries {
+            uid
+            url
+          }
+          byTopics {
+            title
+            url
+          }
+        }
+        sectionLabel
+      }
+      moduleDisplayOption
+    }
+  }
+  }
+ 
+}
