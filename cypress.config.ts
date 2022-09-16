@@ -33,7 +33,7 @@ module.exports = defineConfig({
           });
     },
     env:{
-      baseUrl: "https://content.preview.scm.informagt.com",
+      baseUrl: "https://content.prod.scm.informagt.com",
       masterAPI : "/v1/graphql?client_id=master",
       farmprogressAPI: "/v1/graphql?client_id=farmprogress",
       scmDemoAPI: "/v1/graphql?client_id=scmdemo"

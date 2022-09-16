@@ -60,13 +60,7 @@ query {
       atAGlance {
         shortGlanceVersions
       }
-      termSelector {
-        historyOfPrimaryTerm
-        primaryTerm
-        primaryTermInRealText
-        primaryCategoryBelonged
-        secondaryTerm
-      }
+   
       subbrand {
         title
         locale
