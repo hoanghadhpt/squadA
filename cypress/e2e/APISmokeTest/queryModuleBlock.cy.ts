@@ -1,5 +1,5 @@
-import queryPageContent from "../../PageObjects/query_pages";
-import ApiShareObjects from "../../PageObjects/apiSharedObjects";
+import queryPageContent from "../../support/pages/query_pages";
+import ApiShareObjects from "../../PageObjects/apiSharedObjects.ts.old";
 
 Cypress.on("uncaught:exception", (err, runnable) => {
   return false;

@@ -1,7 +1,7 @@
 import cypress from "cypress";
-import constant from "../fixtures/constant"
-import queryApi from "../fixtures/queryAPi";
-import { apiPost } from "./apiSend";
+import constant from "../../fixtures/constant"
+import queryApi from "../../fixtures/queryAPi";
+import apiPost from "./apiSend";
 class queryPageContent extends queryApi {
     constructor() {
         super();
@@ -19,4 +19,4 @@ class queryPageContent extends queryApi {
     
 
 }
-export default queryPageContent;
+export default new queryPageContent();

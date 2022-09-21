@@ -181,4 +181,4 @@ class APIPost {
     }
 }
 
-export default APIPost
+export default new APIPost();

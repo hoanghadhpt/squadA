@@ -4,9 +4,9 @@ import { any } from "cypress/types/bluebird"
 
 
 class ApiShareObjects {
-    verifyStatusCode(statusCode, expectedStatusCode: number) {
-            expect(statusCode).to.eq(expectedStatusCode)
-    }
+    // verifyStatusCode(statusCode, expectedStatusCode: number) {
+    //         expect(statusCode).to.eq(expectedStatusCode)
+    // }
 
     verifyStatus(expectedStatusCode) {
         cy.task('getStatus').then((statusCode) => {
