@@ -1,106 +1,89 @@
-query Topic{
+query Topic {
   page_topic(
-    sort: oldest
-    where:
-    {
-    url:"/crops/secondary-topic/tertiary-topic"}
-  ){
-    items{
+    sort: newest
+    where: { url: "/crops/secondary-topic/tertiary-topic" }
+  ) {
+    items {
       __typename
       ... on Article {
-        title
+       title
         url
         summary
-        featuredImageGroup{
+        featuredImageGroup {
           imageAltText
-          featuredImage{
+          featuredImage {
             url
           }
         }
-        contributor{
+        contributor {
           contentTypeUid
           contributorName
-          contributorImage{
-            image{url}
+          contributorImage {
+            image {
+              url
+            }
             imageAltText
           }
-        }
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
         }
       }
       ... on Document {
         title
         url
         summary
-        contributor{
+        contributor {
           contentTypeUid
           contributorName
-          contributorImage{
-            image{url}
+          contributorImage {
+            image {
+              url
+            }
             imageAltText
           }
-        }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
         }
       }
       ... on Webinar {
         title
         url
         summary
-        contributor{
+        contributor {
           contentTypeUid
           contributorName
-          contributorImage{
-            image{url}
+          contributorImage {
+            image {
+              url
+            }
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
       }
-       ... on Podcast {
+      ... on Podcast {
         title
         url
         summary
-        contributor{
+        contributor {
           contentTypeUid
           contributorName
-          contributorImage{
-            image{url}
+          contributorImage {
+            image {
+              url
+            }
             imageAltText
           }
-        }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
         }
       }
       ... on Slideshow {
         title
         url
         summary
-        contributor{
+        contributor {
           contentTypeUid
           contributorName
-          contributorImage{
-            image{url}
+          contributorImage {
+            image {
+              url
+            }
             imageAltText
           }
-        }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
         }
       }
       ... on Video {
@@ -108,56 +91,52 @@ query Topic{
         url
         summary
         publishedDate
-        contributor{
+        contributor {
           contributorName
-          contributorImage{
-            image{url}
+          contributorImage {
+            image {
+              url
+            }
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
       }
     }
-    meta{
-      pagination{
+    meta {
+      pagination {
         total
         totalPage
         limit
       }
-      entry{
+      entry {
         __typename
-        ... on TopicPrimary{
+        ... on TopicPrimary {
           title
           uid
           url
-          seo{
-            metaTitle
-            metaDescription
-            canonicalUrl
-            noIndex
-          }
-        
-        }
-        ... on TopicSecondary{
-          title
-          uid
-          url
-          seo{
+          seo {
             metaTitle
             metaDescription
             canonicalUrl
             noIndex
           }
         }
-        ... on TopicTertiary{
+        ... on TopicSecondary {
           title
           uid
           url
-          seo{
+          seo {
+            metaTitle
+            metaDescription
+            canonicalUrl
+            noIndex
+          }
+        }
+        ... on TopicTertiary {
+          title
+          uid
+          url
+          seo {
             metaTitle
             metaDescription
             canonicalUrl

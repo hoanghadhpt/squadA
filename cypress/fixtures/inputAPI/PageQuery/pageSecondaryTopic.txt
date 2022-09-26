@@ -25,11 +25,7 @@ query Topic{
             imageAltText
           }
         }
-        termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Document {
         title
@@ -43,11 +39,7 @@ query Topic{
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Webinar {
         title
@@ -61,11 +53,7 @@ query Topic{
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+         
       }
        ... on Podcast {
         title
@@ -79,11 +67,7 @@ query Topic{
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Slideshow {
         title
@@ -97,11 +81,7 @@ query Topic{
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+         
       }
       ... on Video {
         title
@@ -115,11 +95,7 @@ query Topic{
             imageAltText
           }
         }
-         termSelector{
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+         
       }
     }
     meta{
