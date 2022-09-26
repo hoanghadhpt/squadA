@@ -1,0 +1,48 @@
+query{
+  page_topic(where:{
+    url:"/market-data"
+  }){
+    meta{
+      entry{
+        __typename
+        ... on TopicPrimary{
+          title
+          url
+        }
+        ... on TopicSecondary{
+          title
+          url
+        }
+        ... on TopicTertiary{
+          title
+          url
+        }
+      }
+      pagination{
+        total
+        # totalPage
+      }
+    }
+     items {
+    ...on Article {
+      title
+      url
+    }
+    ...on Document {
+      title
+    }
+    ...on Video {
+      title
+    }
+    ...on Slideshow {
+      title
+    }
+    ...on Webinar {
+      title
+    }
+    ...on Podcast {
+      title
+    }
+    }
+  }
+}

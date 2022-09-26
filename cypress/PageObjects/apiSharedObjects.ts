@@ -26,15 +26,23 @@ class ApiShareObjects {
 
     verifyBodyNotNull(contentType: string){
         cy.task('getBody').then( resBody => { 
-            cy.wrap(resBody.data).its(contentType).then((itemList) =>{
-                if(contentType.includes('_basic')||contentType.includes('_content')){
+            cy.log(contentType)
+            if(contentType.includes('page_event')){
+                cy.wrap(resBody.data).then((itemList) =>{
                     expect(itemList).not.empty
-                }
-                else{
-                    expect(itemList.items).not.empty
-                }
-                
-            })  
+                })  
+            }
+            else {
+                cy.wrap(resBody.data).its(contentType).then((itemList) =>{
+                    if(contentType.includes('_basic')||contentType.includes('_content')){
+                        expect(itemList).not.empty
+                    }
+                    else{
+                        expect(itemList.items).not.empty
+                    }
+                    
+                })  
+            }
         })  
     }
     verifyRequiredFieldNotNull(contentType: string, requiredField: string){

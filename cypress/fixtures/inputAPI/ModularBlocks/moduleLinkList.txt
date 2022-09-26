@@ -1,0 +1,28 @@
+query {
+  all_module_link_list(
+    where: { uidIn: ["blt1252dd66c7d0029f", "blta1958404cbfc23d0"] }
+  ) {
+    entries {
+      meta {
+        entry {
+          title
+      		contentListOption
+          dynamicRecentContent{
+            byContentTypes
+          }
+          manualCuratedContentGroup{
+            manualCuratedContent{
+              contentTypeUid
+              uid
+            }
+            manualCuratedContentLimit
+          }
+        }
+        total
+      }
+      items{
+        __typename
+      }
+    }
+  }
+}

@@ -1,14 +1,17 @@
-query{
-  modular_newsletter_promo(uid:"bltab11c37a0604abb2"){
-    ctaButton{
-      ctaButtonText
-      ctaButtonUrl{
-        href
-        title
+query {
+  all_module_newsletter_promo(
+    where: { uidIn: ["bltab11c37a0604abb2", "blt0c3882df2bf23c8a"] }
+  ) {
+    entries {
+      title
+      ctaButton{
+        ctaButtonText
+        ctaButtonUrl{
+          href
+          title
+        }
       }
+      ctaMessage
     }
-    ctaMessage
-    title
-    uid
   }
 }

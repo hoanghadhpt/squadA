@@ -13,10 +13,10 @@ query event {
       updatedAt
       updatedBy
       eventDetails {
-        button1Link
-        button1Name
-        button2Link
-        button2Name
+        buttons{
+          buttonLink
+          buttonName
+        }
         startDate
         endDate
         eventLogo {

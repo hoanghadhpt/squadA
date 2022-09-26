@@ -1,5 +1,5 @@
 query {
-  page_content(url: "/beef/selecting-your-next-herd-sire") {
+  page_content(url: "/marketing/direct-marketing-beef-can-add-value-to-farm-operation") {
     content {
       ... on Article {
         title

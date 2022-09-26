@@ -10,11 +10,6 @@
         "pageContent": "page_contributor"
     },
     {
-        "contentType": "page events",
-       "queryBody": "PageQuery/pageEvents.txt",
-        "pageContent": "page_events"
-    },
-    {
         "contentType": "page keyword",
        "queryBody": "PageQuery/pageKeyword.txt",
         "pageContent": "page_keyword"

@@ -14,7 +14,7 @@ describe(`Smoke test`, () => {
     const apiExpected = new ApiShareObjects();
 
     const testData = require("../../fixtures/queryPage.json");
-    describe("Check Query all page content", () => {
+    describe("Check Query all page only", () => {
         testData.forEach((testDataRow: any) => {
             const testData = {
                 contentType: testDataRow.contentType,
