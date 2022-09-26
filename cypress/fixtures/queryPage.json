@@ -28,5 +28,20 @@
         "contentType": "page Topic",
        "queryBody": "PageQuery/pageTopic.txt",
         "pageContent": "page_topic"
+    },
+    {
+        "contentType": "page primary Topic",
+       "queryBody": "PageQuery/pagePrimaryTopic.txt",
+        "pageContent": "page_topic"
+    },
+    {
+        "contentType": "page Secondary Topic",
+       "queryBody": "PageQuery/pageSecondaryTopic.txt",
+        "pageContent": "page_topic"
+    },
+    {
+        "contentType": "page Tertiary Topic",
+       "queryBody": "PageQuery/pageTertiaryTopic.txt",
+        "pageContent": "page_topic"
     }
 ]
