@@ -1,0 +1,38 @@
+# Write your query or mutation here
+query{
+  all_module_commodity_prices(
+    where:{
+      uid:"blt66e20eaaa783b8a2"
+    }
+  ){
+
+    entries{
+      meta{
+        total
+        entry{
+          title
+          uid
+          ctaButton{
+            ctaButtonLink
+            ctaButtonText
+          }
+          commoditySymbols
+          copyrightInformation{
+            logoImageAltText
+            logoImage{url}
+            copyrightNotice
+          }
+        }
+      }
+      items{
+        name
+        open
+        change
+        low
+        high
+        last
+        lastTrade
+      }
+    }
+  }
+}
