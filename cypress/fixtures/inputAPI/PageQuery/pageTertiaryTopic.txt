@@ -1,7 +1,7 @@
 query Topic {
   page_topic(
     sort: newest
-    where: { url: "/crops/secondary-topic/tertiary-topic" }
+    where: { url: "/parenttopic-primary/parenttopic-secondary/parenttopic-tertiary" }
   ) {
     items {
       __typename

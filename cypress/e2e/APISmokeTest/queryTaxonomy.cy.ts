@@ -5,7 +5,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
 
-describe(`Smoke test`, () => {
+describe(`Query taxonomy`, () => {
     beforeEach(() => {
         
       })

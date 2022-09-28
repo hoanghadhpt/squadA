@@ -3,7 +3,7 @@ query Topic{
     sort: oldest
     where:
     {
-    url:"/crops/secondary-topic"}
+    url:"/parenttopic-primary/parenttopic-secondary"}
   ){
     items{
       __typename
