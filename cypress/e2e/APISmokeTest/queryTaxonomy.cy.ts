@@ -34,16 +34,19 @@ describe(`Query taxonomy`, () => {
             })
             
             it("And the items list should be not null", () =>{
-                apiExpected.verifyBodyNotNull(testData.pageContent)     
+                // apiExpected.verifyBodyNotNull(testData.pageContent)   
+                cy.verifyBodyNotNull(testData.pageContent)  
             })
             describe("And Required Field should not be empty", () =>{
                 it('Title field should not be empty', ()=>{
-                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title'); 
+                    //apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
+                    cy.verifyRequiredFieldNotNull(testData.pageContent, 'title') 
                 })
                 it('Url should not be empty', ()=>{
                     if(testData.pageContent != 'all_country')
                     {
-                        apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'url'); 
+                        // apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'url'); 
+                        cy.verifyRequiredFieldNotNull(testData.pageContent, 'url') 
                     }
                 }) 
                 // it()

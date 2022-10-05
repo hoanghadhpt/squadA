@@ -47,7 +47,7 @@ Cypress.Commands.add('verifyRequiredFieldNotNull', (contentType: string, require
         }) 
     })
 });
-Cypress.Commands.add('verifyBodyNotNull', () => {
+Cypress.Commands.add('verifyBodyNotNull', (contentType: string) => {
     cy.task('getBody').then( resBody => { 
         cy.wrap(resBody.data).its(contentType).then((itemList) =>{
             if(contentType.includes('_basic')||contentType.includes('_content')){
