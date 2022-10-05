@@ -1,7 +1,7 @@
 [
    
     {
-        "contentType": "keyword",
-        "entryData": "sampleData/entryData/_Keyword.txt"
+        "contentType": "article",
+        "entryData": "sampleData/entryData/_Article.txt"
     }
 ]

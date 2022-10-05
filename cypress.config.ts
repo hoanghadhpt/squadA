@@ -29,7 +29,7 @@ module.exports = defineConfig({
       farmprogressAPI: "/v1/graphql?client_id=farmprogress",
       scmDemoAPI: "/v1/graphql?client_id=scmdemo",
       api_key: "bltace826a255a35e75", // content stack uid
-      authtoken: "blte3b3bec3b2902ef6" // user login auth token
+      authtoken: "blta7d8c964cdfdeaa2" // user login auth token
     }
       
     },

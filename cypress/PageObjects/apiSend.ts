@@ -56,6 +56,10 @@ class APIPost {
     }
 
     postCreateEntry(entry: any, body: any) {
+        // update title
+        var jBody = JSON.parse(body);
+        jBody.entry.title = `[Automation Test] - ${entry} ${Date().toString()}`;
+        
         cy.request({
             method: 'POST',
             url: 'https://eu-api.contentstack.com/v3/content_types/' + entry + '/entries?locale=en-us',
@@ -64,7 +68,7 @@ class APIPost {
                 'authtoken': Cypress.env('authtoken'),
                 'Content-Type': 'application/json'
             },
-            body: body
+            body: jBody
         }).then((res) => {
             cy.wrap(res.status).as('status');
             cy.wrap(res.headers).as('headers');
