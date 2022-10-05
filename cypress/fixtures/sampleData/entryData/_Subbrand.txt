@@ -1,18 +1,17 @@
 {
-    "entry": {
-        "links": [],
-        "seo": {
-            "canonical_url": "",
-            "meta_description": "Search Engine Description*\n",
-            "meta_title": "Search Engine Title*",
-            "no_index": false
-        },
-        "subbrand_logo_group": {
-            "subbrand_image": null,
-            "subbrand_image_alt_text": "Sub-brand Logo Image Alt Text"
-        },
-        "tags": [],
-        "title": "[Automation Test] Sub-brand",
-        "url": "/autotest-sub-brand"
-    }
+  "entry": {
+    "links": null,
+    "seo": {
+        "meta_title": "sponsor 1",
+        "meta_description": "desc",
+        "canonical_url": "",
+        "no_index": true
+    },
+    "subbrand_logo_group": {
+      "subbrand_image": "blt4ae906787fbb37fe",
+      "subbrand_image_alt_text": "Automatic"
+    },
+    "title": "Auto",
+    "url": "/auto-subbrand"
+  }
 }

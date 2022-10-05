@@ -1,21 +1,26 @@
 {
-    "entry": {
-        "icon": null,
-        "seo": {
-            "meta_title": "a",
-            "meta_description": "b",
-            "canonical_url": "",
-            "no_index": false
-        },
-        "tags": [],
-        "tertiary_topics": [
-            {
-                "uid": "blt5c4e32e33083243d",
-                "_content_type_uid": "topic_tertiary"
-            }
-        ],
-        "title": "[Automation Test] Topic Secondary",
-        "topic_page_description": "",
-        "url": "/Auto1-topic-secondary"
-    }
+  "entry": {
+    "parent_topic": [
+      {
+        "uid": "bltbedb66b1e193a963",
+        "_content_type_uid": "topic_primary"
+      }
+    ],
+    "seo": {
+      "meta_title": "Secondary",
+      "meta_description": "Secondary",
+      "canonical_url": "",
+      "no_index": false
+    },
+    "tags": [],
+    "tertiary_topics": [
+      {
+        "uid": "blt6885810e2823f50e",
+        "_content_type_uid": "topic_tertiary"
+      }
+    ],
+    "title": "[For Auto Test] Topic Secondary",
+    "topic_page_description": "Secondary",
+    "url": "/auto-test-secondary-topic"
+  }
 }

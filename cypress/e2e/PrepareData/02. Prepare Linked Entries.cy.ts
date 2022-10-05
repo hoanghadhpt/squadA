@@ -1,16 +1,16 @@
-import queryPageContent from '../../PageObjects/query_pages';
-import ApiShareObjects from '../../PageObjects/apiSharedObjects';
-import APIPost from '../../PageObjects/apiSend';
+import queryPageContent from "../../PageObjects/query_pages";
+import ApiShareObjects from "../../PageObjects/apiSharedObjects";
+import APIPost from "../../PageObjects/apiSend";
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-    return false;
-})
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
+});
 
-describe(`Prepare Data`, () => {
-    beforeEach(() => {})
+describe(`Prepare Keywords, Contributors, Subbrand, ContentFormat`, () => {
+  beforeEach(() => {})
     const apiPost = new APIPost()
     const apiExpected = new ApiShareObjects()
-    const testData = require("../../fixtures/sampleData.json");
+    const testData = require("../../fixtures/sampleLinkedEntries.json");
     describe("Create Data for Content Stack", () => {
         testData.forEach((testDataRow : any) => {
             const testData = {
@@ -43,7 +43,5 @@ describe(`Prepare Data`, () => {
                 })
             })
         })
-
-
     })
-})
+});

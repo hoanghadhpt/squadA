@@ -1,77 +1,68 @@
 {
-    "entry": {
-        "at_a_glance": [],
-        "authored_by": "author by 6",
-        "authored_on": "author on 6",
-        "body": "<p>body 6</p>",
-        "buyers_journey": null,
-        "content_format": [
-            {
-                "uid": "bltdf95300c25d9fafc",
-                "_content_type_uid": "content_format"
-            }
-        ],
-        "contributor": [
-            {
-                "uid": "blt80c1bacc0104f453",
-                "_content_type_uid": "contributor"
-            }
-        ],
-        "featured_image_group": {
-            "featured_image": null,
-            "featured_image_credit": "",
-            "featured_image_caption": "",
-            "image_alt_text": ""
-        },
-        "keywords": [
-            {
-                "uid": "blt1d4210b9a978d545",
-                "_content_type_uid": "keyword"
-            }
-        ],
-        "mobile_headline": "mobile change 6",
-        "old_url": "",
-        "published_date": "2022-07-05T17:00:00.000Z",
-        "seo": {
-            "meta_title": "seo 6",
-            "meta_description": "seo des 6",
-            "canonical_url": "canonical6",
-            "no_index": true
-        },
-        "series_taxonomy": [
-            {
-                "uid": "bltb0de71a036cd0471",
-                "_content_type_uid": "series"
-            }
-        ],
-        "sponsorship_gating_group": {
-            "sponsorship_gating_sponsor_flag": false,
-            "sponsorship_gating_sponsor_reference": [
-                {
-                    "uid": "blt05d7169598f6ea3f",
-                    "_content_type_uid": "sponsor"
-                }
-            ],
-            "sponsorship_gating_campaign_url": "",
-            "sponsorship_gating_gate_reg_flag": true,
-            "sponsorship_gating_gate_external_field_flag": "Eloqua",
-            "sponsorship_gating_external_form_id": ""
-        },
-        "subbrand": [
-            {
-                "uid": "bltfbbcd0aa341411d3",
-                "_content_type_uid": "subbrand"
-            }
-        ],
-        "summary": "summary 6",
-        "tags": [],
-        "term_selector": {
-            "primaryTerm": "topic-4",
-            "secondaryTerm": [
-                "/primary-topic-1"
-            ]
-        },
-        "title": "[Automation Test] - Article",
-        "url": "/automation-test-article"
-    }
+  "entry": {
+    "at_a_glance": [],
+    "authored_by": "user-87873",
+    "authored_on": "2022-03-14T11:56:36+00:00",
+    "body": "<p>Grain marketing and risk management may, at times, appear more like rocket science. Breaking that down into a system that helps describe how your choices impact your marketing results can make a difference and improve grain marketing. That's what Ed Usset, grain marketing economist, University of Minnesota has done in this new guide – \"Grain marketing strategies.\"</p><p>Usset asks a simple question: What kind of marketer are you? But he does it in a unique way, approaching different selling strategies through the personality types of several unique characters he has developed, which can help improve grain marketing on your farm.</p><p>This series ran throughout 2021 in Farm Futures, but is now collected into this new digital guide offering you a single location to go through the different approaches to better understand the impact of a variety of selling strategies.</p><p>Whether your focus is on corn futures, wheat prices, CME soybeans or other grain marketing opportunities, this guide will give you practical wisdom to help refine and define your approach.</p><h2><a href=\"https://pgs.farmprogress.com/grain-v1?code=CRPED2C1\" style=\"color:#0563c1; text-decoration:underline target=_blank\" target=\"_blank\"><strong><img alt=\"improve grain marketing\" embed-exclude=\"\" src=\"https://eu-images.contentstack.com/v3/assets/bltaafcf579726913de/blt91edb4cb7b55ad58/630f5c7c3f8b1c1634d645a7/WP-grain-marketing-strategies.png\" data-sys-asset-uid=\"blt91edb4cb7b55ad58\" alt=\"WP-grain-marketing-strategies.png\" asset_uid=\"blt91edb4cb7b55ad58\" style=\"height:181px; width:300px\" /><br />Download the FREE report: Grain marketing strategies</strong></a></h2><p>Whether you sell off the combine or hold to maximize basis pricing opportunities, Usset's approach shows how each approach can impact you bottom line.</p><h2>Meet the characters</h2><p>In this guide, Usset tells the store of five different selling strategies. The names of each marketer offers a hint into their strategy, but as you go through the guide you can see data showing how each of their approaches performed.</p><p>Here's the cast of characters in this guide:</p><p><strong>Barney Binless</strong> has no interest in pricing grain before harvest, and he has no on-farm storage. He simply sells his crop off the combine every year. What might that mean to his bottom line? And what income opportunities might he be missing with the approach.</p><p><strong>May Sellers</strong> uses a popular marketing approach by placing unpriced grain in storage and waiting to sell later in the crop year. Shows how May's strategy compares to Barney's in the guide, offering a look at the pricing each receive.</p><p><strong>Sally Sellthecarry</strong> uses a marketing strategy often popular with producers who have on-farm storage. The focus here is on corn, and Usset shows how Sally's approach stacks up against Barney's and May's.</p><p><strong>Earl Eitheror</strong> decides at harvest to use either the May Sellers or Sally Sellthecarry approach based on carrying charges. His first step is to put that grain in storage, the guide shows what happens next.</p><p><strong>Justin Price</strong> focuses on pre-harvest marketing, only paying attention to prices with an objective of pricing 80% of his expected production in \"scale-up\" sales before harvest. Usset explains that process and compares his results to those of Barney Binless.</p><p><em><strong><a href=\"https://pgs.farmprogress.com/grain-v1?code=CRPED2C1\" style=\"color:#0563c1; text-decoration:underline\">FREE Download: Grain marketing strategies</a></strong></em></p><h2>Beyond selling strategy analysis</h2><p>The risk management guide includes three other features that can help you fine-tune and improve grain marketing strategies.</p><p><em>The pros and cons of using options</em> looks at how put options work as a strategy in addition to HTA or forward contracts. Options can be confusing, but Usset breaks down this approach to risk management and the flexibility it may offer your risk management plan.</p><p><em>Managing price risk with a storage hedge</em> looks at the role of basis in risk management and how it can be used in conjunction with on-farm storage to bolster your grain marketing plan. Usset digs into the value of basis offering real-world examples to help you fine-tune the approach.</p><p><em>Why I prefer futures contracts</em> delves into the use of futures contracts as a hedging, not speculation, tool for your risk management plan. Usset even explains why for a true hedger a margin call can be seen as a positive.</p><h2><a href=\"https://pgs.farmprogress.com/grain-v1?code=CRPED2C1\" style=\"color:#0563c1; text-decoration:underline target=_blank\" target=\"_blank\"><strong>Download Grain marketing strategies</strong></a><span style=\"color:#0563c1\"><u><strong> NOW, FREE</strong></u></span></h2><p>Creative examples bolstered by real world data are a hallmark of the information Usset provides regularly in Farm Futures. This guide gathers key information from his marketing education series that provides farmers insights ever issue to improve grain marketeing and better their risk management plans.</p><p>No one knows the direction the market will take in any year, volatile as in early 2022, or slow as in other years. The strategies outlined in this issue offer producers the chance to improve grain marketing plans and put more money in their wallets.</p><h2>Improve grain marketing:&nbsp;<a href=\"https://pgs.farmprogress.com/grain-v1?code=CRPED2C1\" style=\"color:#0563c1; text-decoration:underline target=_blank\" target=\"_blank\"><strong>Download Grain marketing strategies</strong></a></h2>",
+    "buyers_journey": null,
+    "content_format": [],
+    "contributor": [
+      {
+        "uid": "blt812dc5bb32056e88",
+        "_content_type_uid": "contributor"
+      }
+    ],
+    "created_at": "2022-08-31T13:40:11.065Z",
+    "created_by": "blt2c1e0a1f7f327171",
+    "featured_image_group": {
+      "featured_image_caption": "",
+      "featured_image_credit": "",
+      "image_alt_text": "marketing-strategies-promo.jpg",
+      "featured_image": null
+    },
+    "keywords": [
+      {
+        "uid": "blt2a3d80b58f32c7fe",
+        "_content_type_uid": "keyword"
+      }
+    ],
+    "mobile_headline": "How to improve grain marketing",
+    "old_url": "/marketing/how-improve-grain-marketing",
+    "published_date": "2022-03-14T11:57:19.000Z",
+    "related_events": [],
+    "related_inline_content": [],
+    "seo": {
+      "meta_title": "Improve grain marketing, tips and ideas",
+      "meta_description": "How you approach grain marketing impacts your bottom line. A new guide offers different styles and analyzes results to help improve grain marketing.",
+      "canonical_url": "https://www.farmprogress.com/marketing/how-improve-grain-marketing",
+      "no_index": false
+    },
+    "series_taxonomy": [],
+    "sponsorship_gating_group": {
+      "sponsorship_gating_gate_reg_flag": false,
+      "sponsorship_gating_gate_external_field_flag": "None",
+      "sponsorship_gating_external_form_id": "",
+      "sponsorship_gating_sponsor_flag": false,
+      "sponsorship_gating_campaign_url": "",
+      "sponsorship_gating_sponsor_reference": []
+    },
+    "subbrand": [
+      {
+        "uid": "blt0a81a5fa9024d021",
+        "_content_type_uid": "subbrand"
+      }
+    ],
+    "summary": "How you approach grain marketing impacts your bottom line. A new guide offers different styles and analyzes results to help farm profits.",
+    "tags": [],
+    "title": "Import from JSON",
+    "topic_selector": {
+      "main_topic": [
+        {
+          "uid": "blt6885810e2823f50e",
+          "_content_type_uid": "topic_tertiary"
+        }
+      ]
+    },
+    "url": "/how-to-improve-grain-marketing"
+  }
 }

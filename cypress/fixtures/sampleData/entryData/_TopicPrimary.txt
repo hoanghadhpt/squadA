@@ -1,28 +1,19 @@
 {
     "entry": {
-        "secondary_topics": [
-            {
-                "uid": "blt61ff16925e47ea9c",
-                "_content_type_uid": "topic_secondary"
+            "icon": null,
+            "parent_topic": [],
+            "secondary_topics": [
+              { "uid": "bltdcbab18c6dbff488", "_content_type_uid": "topic_secondary" }
+            ],
+            "seo": {
+              "meta_title": "parentTopic Primary",
+              "meta_description": "parentTopic Primary",
+              "canonical_url": "",
+              "no_index": false
             },
-            {
-                "uid": "bltec635cb3ca0ed6a8",
-                "_content_type_uid": "topic_secondary"
-            },
-            {
-                "uid": "blt5ddabbb0504a37d1",
-                "_content_type_uid": "topic_secondary"
-            }
-        ],
-        "seo": {
-            "meta_title": "seo title",
-            "meta_description": "seo desc",
-            "canonical_url": "",
-            "no_index": false
-        },
-        "tags": [],
-        "title": "[Automation Test] Topic Primary",
-        "topic_page_description": "[Automation Test] - Topic Primary 1",
-        "url": "/Automation-Test1-Topic-Primary"
+            "tags": [],
+            "title": "parentTopic Primary",
+            "topic_page_description": "parentTopic Primary",
+            "url": "/auto-test-primary-topic"
     }
 }

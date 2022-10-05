@@ -1,0 +1,18 @@
+[
+    {
+        "contentType": "keyword",
+        "entryData": "sampleData/entryData/_Keyword.txt"
+    },
+    {
+        "contentType": "contributor",
+        "entryData": "sampleData/entryData/_Contributor.txt"
+    },
+    {
+        "contentType": "content_format",
+        "entryData": "sampleData/entryData/_ContentFormat.txt"
+    },
+    {
+        "contentType": "subbrand",
+        "entryData": "sampleData/entryData/_Subbrand.txt"
+    }
+]
