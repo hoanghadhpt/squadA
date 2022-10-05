@@ -36,10 +36,13 @@ describe(`Query core content types`, () => {
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
-                
+            describe("And Required Field should not be empty", () =>{
+                it('Title should not be empty', () => {
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
+                })
+                it('Published date should not be empty', () => {
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
+                })
             })
             it("And query not return error", () => {
                 apiExpected.verifyNoError(testData.pageContent);

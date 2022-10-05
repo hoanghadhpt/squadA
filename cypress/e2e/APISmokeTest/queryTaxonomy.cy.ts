@@ -35,8 +35,11 @@ describe(`Query taxonomy`, () => {
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
+            describe("And Required Field should not be empty", () =>{
+                it('Title should not be empty', () => {
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
+                })
+                
             })
             it("And query not return error", () => {
                 apiExpected.verifyNoError(testData.pageContent);

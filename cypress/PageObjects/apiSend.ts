@@ -1,4 +1,3 @@
-
 export const apiPost = new class APIPost {
 
     updateEntry(entry: any, uid: any, body: any) {
