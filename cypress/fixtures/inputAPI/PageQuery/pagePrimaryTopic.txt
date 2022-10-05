@@ -1,85 +1,243 @@
-query Topic {
-  page_topic(sort: newest, where: { url: "/crops" }) {
-    items {
+query Topic{
+  page_topic(
+    sort: oldest
+    where: {
+    url:"/crops"}
+  ){
+    items{
       __typename
       ... on Article {
         title
         url
         summary
-        featuredImageGroup {
+        publishedDate
+        body
+        featuredImageGroup{
           imageAltText
-          featuredImage {
-            url
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
           }
         }
-        contributor {
-          contentTypeUid
-          contributorName
-          contributorImage {
-            image {
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
               url
             }
-            imageAltText
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
           }
-        }
-      }
-      ... on Document {
-        title
-        url
-        summary
-        contributor {
-          contentTypeUid
-          contributorName
-          contributorImage {
-            image {
+          additionalTopics{
+            ... on TopicPrimary{
+              title
               url
             }
-            imageAltText
-          }
-        }
-      }
-      ... on Webinar {
-        title
-        url
-        summary
-        contributor {
-          contentTypeUid
-          contributorName
-          contributorImage {
-            image {
+            ... on TopicSecondary{
+              title
               url
             }
-            imageAltText
+            ... on TopicTertiary{
+              title
+              url
+            }
           }
         }
       }
-      ... on Podcast {
+     ... on Document {
         title
         url
         summary
-        contributor {
-          contentTypeUid
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
           contributorName
-          contributorImage {
-            image {
+          contributorImage{
+            image{url}
+          }
+        }
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
               url
             }
-            imageAltText
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
           }
         }
       }
-      ... on Slideshow {
+     ... on Webinar {
         title
         url
         summary
-        contributor {
-          contentTypeUid
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
           contributorName
-          contributorImage {
-            image {
+          contributorImage{
+            image{url}
+          }
+        }
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
               url
             }
-            imageAltText
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+     ... on Podcast {
+        title
+        url
+        summary
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
+          }
+        }
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+     ... on Slideshow {
+        title
+        url
+        summary
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
+          }
+        }
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
           }
         }
       }
@@ -88,52 +246,96 @@ query Topic {
         url
         summary
         publishedDate
-        contributor {
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
           contributorName
-          contributorImage {
-            image {
+          contributorImage{
+            image{url}
+          }
+        }
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
               url
             }
-            imageAltText
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
           }
         }
       }
     }
-    meta {
-      pagination {
+    meta{
+      pagination{
         total
         totalPage
-        limit
       }
-      entry {
+      entry{
         __typename
-        ... on TopicPrimary {
+        ... on TopicPrimary{
           title
-          uid
           url
-          seo {
+          topicPageDescription
+          seo{
+            metaTitle
+            metaDescription
+            canonicalUrl
+            noIndex
+          }
+        
+        }
+        ... on TopicSecondary{
+          title
+          topicPageDescription
+          url
+          tertiaryTopics{
+            title
+            url
+          }
+          parentTopic{
+            title
+            url
+          }
+          seo{
             metaTitle
             metaDescription
             canonicalUrl
             noIndex
           }
         }
-        ... on TopicSecondary {
+        ... on TopicTertiary{
           title
-          uid
           url
-          seo {
-            metaTitle
-            metaDescription
-            canonicalUrl
-            noIndex
+          topicPageDescription
+           parentTopic{
+            title
+            url
           }
-        }
-        ... on TopicTertiary {
-          title
-          uid
-          url
-          seo {
+          seo{
             metaTitle
             metaDescription
             canonicalUrl
