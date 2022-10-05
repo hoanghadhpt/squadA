@@ -29,17 +29,29 @@ describe(`Query taxonomy`, () => {
             })
         
             it("Then I expected status code as 200", ()=>{
-                apiExpected.verifyStatus(200 ) 
+                // apiExpected.verifyStatus(200 ) 
+                cy.verifyStatus(200 ) 
             })
             
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
+            describe("And Required Field should not be empty", () =>{
+                it('Title field should not be empty', ()=>{
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title'); 
+                })
+                it('Url should not be empty', ()=>{
+                    if(testData.pageContent != 'all_country')
+                    {
+                        apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'url'); 
+                    }
+                }) 
+                // it()
             })
+
             it("And query not return error", () => {
-                apiExpected.verifyNoError(testData.pageContent);
+                // apiExpected.verifyNoError(testData.pageContent);
+                cy.verifyNoError()
               });
         })
     })
