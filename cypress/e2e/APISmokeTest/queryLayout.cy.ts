@@ -29,21 +29,25 @@ describe(`Smoke test`, () => {
             })
         
             it("Then I expected status code as 200", ()=>{
-                apiExpected.verifyStatus(200 ) 
+                //apiExpected.verifyStatus(200 ) 
+                cy.verifyStatus(200 ) 
             })
             
             it("And Required Field should not be empty", () =>{
               if(testData.pageContent === 'navigation')  {
-                apiExpected.verifyNavigationNotNull(testData.pageContent);
+                    //apiExpected.verifyNavigationNotNull(testData.pageContent);
+                    cy.verifyNavigationNotNull(testData.pageContent);
                 }
                 else{
-                    apiExpected.verifyFooterNotNull(testData.pageContent);
+                    //apiExpected.verifyFooterNotNull(testData.pageContent);
+                    cy.verifyFooterNotNull(testData.pageContent);
                 }
             })
 
 
             it("And query not return error", () => {
-                apiExpected.verifyNoError(testData.pageContent);
+                //apiExpected.verifyNoError(testData.pageContent);
+                cy.verifyNoError(testData.pageContent);
               });
         })
     })

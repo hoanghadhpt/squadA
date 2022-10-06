@@ -49,7 +49,13 @@ Cypress.Commands.add('verifyRequiredFieldNotNull', (contentType: string, require
 });
 Cypress.Commands.add('verifyBodyNotNull', (contentType: string) => {
     cy.task('getBody').then( resBody => { 
-        cy.wrap(resBody.data).its(contentType).then((itemList) =>{
+        cy.log(contentType)
+        if( contentType === 'page_event'){
+            cy.wrap(resBody.data).its("page_events").then((itemList) =>{
+                expect(itemList.items).not.empty
+            })
+        } else {
+            cy.wrap(resBody.data).its(contentType).then((itemList) =>{
             if(contentType.includes('_basic')||contentType.includes('_content')){
                 expect(itemList).not.empty
             }
@@ -58,5 +64,7 @@ Cypress.Commands.add('verifyBodyNotNull', (contentType: string) => {
             }
             
         })  
+    }
+
     })   
 });
