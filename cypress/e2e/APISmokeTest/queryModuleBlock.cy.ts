@@ -29,7 +29,8 @@ describe(`Query Modular Blocks`, () => {
         });
 
         it("Then I expected status code as 200", () => {
-          apiExpected.verifyStatus(200);
+          //apiExpected.verifyStatus(200);
+          cy.verifyStatus(200);
         });
         if (
           testData.pageContent !== "modular_content_spotlight" &&
@@ -41,31 +42,29 @@ describe(`Query Modular Blocks`, () => {
           testData.pageContent !== "module_section_promo" &&
           testData.pageContent !== "module_section_promo_v2" &&
           testData.pageContent !== "module_three_column_highlight" &&
-          testData.pageContent !== "modular_newsletter_promo" && testData.pageContent == "module_featured"
-          
+          testData.pageContent !== "modular_newsletter_promo" &&
+          testData.pageContent == "module_featured"
         ) {
           it("And the items list should be not null", () => {
-            apiExpected.verifyBodyNotNull(testData.pageContent);
+            //apiExpected.verifyBodyNotNull(testData.pageContent);
+            cy.verifyBodyNotNull(testData.pageContent);
           });
 
           it("And Required Field should not be empty", () => {
-            apiExpected.verifyRequiredFieldNotNull(
-              testData.pageContent,
-              "title"
-            );
+            //apiExpected.verifyRequiredFieldNotNull(testData.pageContent,"title");
+            cy.verifyRequiredFieldNotNull(testData.pageContent, "title");
           });
-        }
-        else if (testData.pageContent == "module_featured"){
+        } else if (testData.pageContent == "module_featured") {
           it("And the items list should be not null", () => {
-            apiExpected.verifyBodyNotNull(testData.pageContent);
+            //apiExpected.verifyBodyNotNull(testData.pageContent);
+            cy.verifyBodyNotNull(testData.pageContent);
           });
         }
 
         it("And query not return error", () => {
-          apiExpected.verifyNoError(testData.pageContent);
+          //apiExpected.verifyNoError(testData.pageContent);
+          cy.verifyNoError(testData.pageContent);
         });
-
-        
       });
     });
   });

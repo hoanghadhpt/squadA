@@ -1,8 +1,7 @@
 query Topic{
   page_topic(
     sort: oldest
-    where:
-    {
+    where: {
     url:"/parenttopic-primary/parenttopic-secondary"}
   ){
     items{
@@ -11,105 +10,296 @@ query Topic{
         title
         url
         summary
+        publishedDate
+        body
         featuredImageGroup{
           imageAltText
-          featuredImage{
-            url
-          }
+          featuredImage{url}
         }
         contributor{
-          contentTypeUid
           contributorName
           contributorImage{
             image{url}
-            imageAltText
           }
         }
-        
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
       }
-      ... on Document {
+     ... on Document {
         title
         url
         summary
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
-          contentTypeUid
           contributorName
           contributorImage{
             image{url}
-            imageAltText
           }
         }
-        
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
       }
-      ... on Webinar {
+     ... on Webinar {
         title
         url
         summary
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
-          contentTypeUid
           contributorName
           contributorImage{
             image{url}
-            imageAltText
           }
         }
-         
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
       }
-       ... on Podcast {
+     ... on Podcast {
         title
         url
         summary
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
-          contentTypeUid
           contributorName
           contributorImage{
             image{url}
-            imageAltText
           }
         }
-        
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
       }
-      ... on Slideshow {
+     ... on Slideshow {
         title
         url
         summary
+        publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
-          contentTypeUid
           contributorName
           contributorImage{
             image{url}
-            imageAltText
           }
         }
-         
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
       }
       ... on Video {
         title
         url
         summary
         publishedDate
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
           contributorImage{
             image{url}
-            imageAltText
           }
         }
-         
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
       }
     }
     meta{
       pagination{
         total
         totalPage
-        limit
       }
       entry{
         __typename
         ... on TopicPrimary{
           title
-          uid
           url
+          topicPageDescription
           seo{
             metaTitle
             metaDescription
@@ -120,8 +310,16 @@ query Topic{
         }
         ... on TopicSecondary{
           title
-          uid
+          topicPageDescription
           url
+          tertiaryTopics{
+            title
+            url
+          }
+          parentTopic{
+            title
+            url
+          }
           seo{
             metaTitle
             metaDescription
@@ -131,8 +329,12 @@ query Topic{
         }
         ... on TopicTertiary{
           title
-          uid
           url
+          topicPageDescription
+           parentTopic{
+            title
+            url
+          }
           seo{
             metaTitle
             metaDescription
