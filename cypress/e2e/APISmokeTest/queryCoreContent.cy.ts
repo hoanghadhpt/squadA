@@ -5,7 +5,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
 
-describe(`Smoke test`, () => {
+describe(`Query core content types`, () => {
     beforeEach(() => {
         
       })
@@ -22,6 +22,7 @@ describe(`Smoke test`, () => {
         context(`Query page content: ${testData.contentType}`, ()=>{ 
             it(`Given I send the graphql query for ${testData.contentType} `, () =>{
                 queryGraphql.queryPageContentApi('masterAPI', testData.queryBody)
+                cy.addContext(Cypress.env('masterAPI'));
                 cy.get('@resBody').then(resBody => {
                     cy.task('setStatus', resBody.status);
                     cy.task('setBody', resBody.body)
@@ -35,11 +36,17 @@ describe(`Smoke test`, () => {
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
-                
+            describe("And Required Field should not be empty", () =>{
+                it('Title should not be empty', () => {
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
+                })
+                it('Published date should not be empty', () => {
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
+                })
             })
+            it("And query not return error", () => {
+                apiExpected.verifyNoError(testData.pageContent);
+              });
         })
     })
     

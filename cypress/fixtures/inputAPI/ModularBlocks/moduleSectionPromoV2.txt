@@ -1,0 +1,25 @@
+query {
+  all_module_section_promo_v2(
+    where: { uidIn: ["bltf9b9660638a63291", "bltcab8673835654c58"] }
+  ) {
+    entries {
+      meta{
+        entry{
+          title
+      		contentListOption
+          dynamicRecentContent{
+            byContentTypes
+          }
+          manualCuratedContentGroup{
+            manualCuratedContent{
+              contentTypeUid
+              uid
+            }
+            manualCuratedContentLimit
+          }
+        }
+        total
+      }
+    }
+  }
+}

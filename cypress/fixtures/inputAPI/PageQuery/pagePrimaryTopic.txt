@@ -1,0 +1,146 @@
+query Topic {
+  page_topic(sort: newest, where: { url: "/crops" }) {
+    items {
+      __typename
+      ... on Article {
+        title
+        url
+        summary
+        featuredImageGroup {
+          imageAltText
+          featuredImage {
+            url
+          }
+        }
+        contributor {
+          contentTypeUid
+          contributorName
+          contributorImage {
+            image {
+              url
+            }
+            imageAltText
+          }
+        }
+      }
+      ... on Document {
+        title
+        url
+        summary
+        contributor {
+          contentTypeUid
+          contributorName
+          contributorImage {
+            image {
+              url
+            }
+            imageAltText
+          }
+        }
+      }
+      ... on Webinar {
+        title
+        url
+        summary
+        contributor {
+          contentTypeUid
+          contributorName
+          contributorImage {
+            image {
+              url
+            }
+            imageAltText
+          }
+        }
+      }
+      ... on Podcast {
+        title
+        url
+        summary
+        contributor {
+          contentTypeUid
+          contributorName
+          contributorImage {
+            image {
+              url
+            }
+            imageAltText
+          }
+        }
+      }
+      ... on Slideshow {
+        title
+        url
+        summary
+        contributor {
+          contentTypeUid
+          contributorName
+          contributorImage {
+            image {
+              url
+            }
+            imageAltText
+          }
+        }
+      }
+      ... on Video {
+        title
+        url
+        summary
+        publishedDate
+        contributor {
+          contributorName
+          contributorImage {
+            image {
+              url
+            }
+            imageAltText
+          }
+        }
+      }
+    }
+    meta {
+      pagination {
+        total
+        totalPage
+        limit
+      }
+      entry {
+        __typename
+        ... on TopicPrimary {
+          title
+          uid
+          url
+          seo {
+            metaTitle
+            metaDescription
+            canonicalUrl
+            noIndex
+          }
+        }
+        ... on TopicSecondary {
+          title
+          uid
+          url
+          seo {
+            metaTitle
+            metaDescription
+            canonicalUrl
+            noIndex
+          }
+        }
+        ... on TopicTertiary {
+          title
+          uid
+          url
+          seo {
+            metaTitle
+            metaDescription
+            canonicalUrl
+            noIndex
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-query{
-  all_topic_tertiary{
+query {
+  all_topic_tertiary(asc:"title"){
     meta{
       total
     }
@@ -7,13 +7,17 @@ query{
       title
       uid
       url
-      topicPageDescription
       createdAt
+      createdBy
+      contentTypeUid
+      updatedAt
+      updatedBy
       icon{
         title
         url
       }
       locale
+      topicPageDescription
       seo{
         metaTitle
         metaDescription

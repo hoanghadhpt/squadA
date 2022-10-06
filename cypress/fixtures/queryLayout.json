@@ -1,0 +1,13 @@
+[
+  {
+    "contentType": "Navigation",
+    "queryBody": "pageLayout/navigation.txt",
+    "pageContent": "navigation"
+  },
+  
+  {
+    "contentType": "Footer",
+    "queryBody": "pageLayout/footer.txt",
+    "pageContent": "footer"
+  }
+]

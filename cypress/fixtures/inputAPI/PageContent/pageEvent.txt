@@ -1,0 +1,52 @@
+query  {
+  page_events(
+    limit: 25
+  ) {
+    meta {
+      pagination {
+        limit
+        page
+        total
+        totalPage
+      }
+    }
+    items {
+      title
+      url
+      eventDescription
+      uid
+      createdAt
+      createdBy
+      locale
+      updatedAt
+      updatedBy
+      eventDetails {
+        startDate
+        endDate
+        eventLogo {
+          eventLogoAlt
+          logoFile {
+            url
+          }
+        }
+        buttons {
+          buttonLink
+          buttonName
+        }
+        eventType
+        eventUrl
+        location
+      }
+      publishDetails {
+        locale
+        time
+      }
+      seo {
+        canonicalUrl
+        metaDescription
+        metaTitle
+        noIndex
+      }
+    }
+  }
+}

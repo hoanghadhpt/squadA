@@ -6,7 +6,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
 
-describe(`Smoke test`, () => {
+describe(`Query page only`, () => {
     beforeEach(() => {
         
       })
@@ -14,7 +14,7 @@ describe(`Smoke test`, () => {
     const apiExpected = new ApiShareObjects();
 
     const testData = require("../../fixtures/queryPage.json");
-    describe("Check Query all page content", () => {
+    describe("Check Query all page only", () => {
         testData.forEach((testDataRow: any) => {
             const testData = {
                 contentType: testDataRow.contentType,
@@ -37,9 +37,14 @@ describe(`Smoke test`, () => {
             it("And the items list should be not null", () =>{
                 apiExpected.verifyBodyNotNull(testData.pageContent)     
             })
-            it("And Required Field should not be empty", () =>{
-                apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');  
+            describe("And Required Field should not be empty", () =>{
+                it('Title should not be empty', () => {
+                    apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
+                })
             })
+            it("And query not return error", () => {
+                apiExpected.verifyNoError(testData.pageContent);
+              });
         })
     })
     

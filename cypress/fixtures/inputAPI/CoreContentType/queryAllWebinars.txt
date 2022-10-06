@@ -51,12 +51,33 @@ query {
       atAGlance {
         shortGlanceVersions
       }
-      termSelector {
-        historyOfPrimaryTerm
-        primaryTerm
-        primaryTermInRealText
-        primaryCategoryBelonged
-        secondaryTerm
+      topicSelector {
+        mainTopic {
+          __typename
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
       }
       subbrand {
         title

@@ -10,11 +10,6 @@
         "pageContent": "page_contributor"
     },
     {
-        "contentType": "page events",
-       "queryBody": "PageQuery/pageEvents.txt",
-        "pageContent": "page_events"
-    },
-    {
         "contentType": "page keyword",
        "queryBody": "PageQuery/pageKeyword.txt",
         "pageContent": "page_keyword"
@@ -32,6 +27,21 @@
     {
         "contentType": "page Topic",
        "queryBody": "PageQuery/pageTopic.txt",
+        "pageContent": "page_topic"
+    },
+    {
+        "contentType": "page primary Topic",
+       "queryBody": "PageQuery/pagePrimaryTopic.txt",
+        "pageContent": "page_topic"
+    },
+    {
+        "contentType": "page Secondary Topic",
+       "queryBody": "PageQuery/pageSecondaryTopic.txt",
+        "pageContent": "page_topic"
+    },
+    {
+        "contentType": "page Tertiary Topic",
+       "queryBody": "PageQuery/pageTertiaryTopic.txt",
         "pageContent": "page_topic"
     }
 ]

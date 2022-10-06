@@ -3,7 +3,7 @@ query {
     limit: 10
     page: 1
     sort: newest
-    where: { url: "/series/series-test-mixed-url" }
+    where: { url: "/series/videos" }
   ) {
     meta {
       pagination {
@@ -229,13 +229,8 @@ query {
         }
         relatedInlineContent {
           relatedItem {
-            __typename
-            ... on Article {
-              title
-            }
-            ... on Document {
-              title
-            }
+           	title
+            url
           }
         }
       }

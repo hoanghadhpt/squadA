@@ -1,0 +1,96 @@
+query {
+  all_module_latest_content(
+    where:{
+      uidIn:["bltc10bda8c8bbcbd86", "blt3954aaa800e4f5cd"]
+    }
+  ) {
+    entries{
+      meta{
+        entry{
+          title
+        __typename
+        }
+      }
+      items{
+        itemsLatestSection1{
+          __typename
+          ... on Article{
+            title
+            uid
+          }
+          ... on Document{
+            title
+            uid
+          }
+          ... on Event{
+            title
+            uid
+          }
+          ... on ExternalLink{
+            title
+            uid
+          }
+          ... on Magazine{
+            title
+            uid
+          }
+          ... on Podcast{
+            title
+            uid
+          }
+          ... on Slideshow{
+            title
+            uid
+          }
+          ... on Video{
+            title
+            uid
+          }
+          ... on Webinar{
+            title
+            uid
+          }
+        }
+        itemsLatestSection2{
+          __typename
+          ... on Article{
+            title
+            uid
+          }
+          ... on Document{
+            title
+            uid
+          }
+          ... on Event{
+            title
+            uid
+          }
+          ... on ExternalLink{
+            title
+            uid
+          }
+          ... on Magazine{
+            title
+            uid
+          }
+          ... on Podcast{
+            title
+            uid
+          }
+          ... on Slideshow{
+            title
+            uid
+          }
+          ... on Video{
+            title
+            uid
+          }
+          ... on Webinar{
+            title
+            uid
+          }
+        }
+      }
+    }
+  }
+}

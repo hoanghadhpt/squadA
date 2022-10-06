@@ -1,0 +1,100 @@
+query {
+  all_module_three_column_highlight(
+    where: { uidIn: ["bltad2f53b8ba7a3e13", "blta2a605a950f192c1"] }
+  ) {
+    entries {
+      items {
+        column1 {
+          #__typename
+          ... on Article {
+            title
+          }
+          ... on Document {
+            title
+          }
+          ... on Event {
+            title
+          }
+          ... on ExternalLink {
+            title
+          }
+          ... on Magazine {
+            title
+          }
+          ... on Podcast {
+            title
+          }
+          ... on Slideshow {
+            title
+          }
+          ... on Video {
+            title
+          }
+          ... on Webinar {
+            title
+          }
+        }
+        column2 {
+          __typename
+          ... on Article {
+            title
+          }
+          ... on Document {
+            title
+          }
+          ... on Event {
+            title
+          }
+          ... on ExternalLink {
+            title
+          }
+          ... on Magazine {
+            title
+          }
+          ... on Podcast {
+            title
+          }
+          ... on Slideshow {
+            title
+          }
+          ... on Video {
+            title
+          }
+          ... on Webinar {
+            title
+          }
+        }
+        column3 {
+          __typename
+          ... on Article {
+            title
+          }
+          ... on Document {
+            title
+          }
+          ... on Event {
+            title
+          }
+          ... on ExternalLink {
+            title
+          }
+          ... on Magazine {
+            title
+          }
+          ... on Podcast {
+            title
+          }
+          ... on Slideshow {
+            title
+          }
+          ... on Video {
+            title
+          }
+          ... on Webinar {
+            title
+          }
+        }
+      }
+    }
+  }
+}

@@ -26,33 +26,27 @@ class ApiShareObjects {
 
     verifyBodyNotNull(contentType: string){
         cy.task('getBody').then( resBody => { 
-            cy.wrap(resBody.data).its(contentType).then((itemList) =>{
-                if(contentType.includes('_basic')||contentType.includes('_content')){
+            cy.log(contentType)
+            if(contentType.includes('page_event')){
+                cy.wrap(resBody.data).then((itemList) =>{
                     expect(itemList).not.empty
-                }
-                else{
-                    expect(itemList.items).not.empty
-                }
-                
-            })  
+                })  
+            }
+            else {
+                cy.wrap(resBody.data).its(contentType).then((itemList) =>{
+                    if(contentType.includes('_basic')||contentType.includes('_content')){
+                        expect(itemList).not.empty
+                    }
+                    else{
+                        expect(itemList.items).not.empty
+                    }
+                    
+                })  
+            }
         })  
     }
     verifyRequiredFieldNotNull(contentType: string, requiredField: string){
         cy.task('getBody').then(resBody =>{    
-            /** 
-            cy.wrap(resBody.data).its(contentType).then((pageData) =>{
-                cy.wrap(pageData.items).as('itemList')
-                cy.log(typeof '@itemList')
-                cy.get('@itemList').each(element =>{
-                    if(contentType === 'all_event' && requiredField === 'publishedDate') {
-                        expect(element).not.have.property(requiredField)
-                    }
-                    else{
-                        expect(element).property(requiredField).not.null
-                    }
-                })
-                 
-            }) */
             
             const itemsArr = resBody.data[contentType].items;
             itemsArr.forEach(item => {
@@ -65,6 +59,35 @@ class ApiShareObjects {
             }) 
         })
         
+    }
+    verifyNoError(contentType: string){
+        cy.task('getBody').then( resBody => { 
+                expect(resBody).not.has.property('errors')                
+        })  
+    }
+
+    verifyNavigationNotNull(contentType: string){
+        cy.task('getBody').then(resBody =>{    
+            const itemsArr = resBody.data['navigation'];
+            cy.log(itemsArr);
+           // expect(itemsArr['informaBar']).has.not.null
+            expect(itemsArr['logo'].url).has.not.null
+            //expect(itemsArr['mainMenuItems']).has.not.null
+            //expect(itemsArr['secondaryMenu']).has.not.null
+            //expect(itemsArr['sideNavSections']).has.not.null
+        })
+    }
+
+    verifyFooterNotNull(contentType: string){
+        cy.task('getBody').then(resBody =>{    
+            const itemsArr = resBody.data['footer'];
+            cy.log(itemsArr);
+           // expect(itemsArr['informaBar']).has.not.null
+            expect(itemsArr['logo'].url).has.not.null
+            //expect(itemsArr['mainMenuItems']).has.not.null
+            //expect(itemsArr['secondaryMenu']).has.not.null
+            //expect(itemsArr['sideNavSections']).has.not.null
+        })
     }
 
 }

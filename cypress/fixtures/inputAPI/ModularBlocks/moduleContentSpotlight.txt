@@ -1,0 +1,38 @@
+query {
+  all_module_content_spotlight(
+    where: { uidIn: ["bltbd430d2b41e36ca6", "bltb2841008cdfd0f1d"] }
+  ) {
+    entries {
+      title
+      uid
+      ctaButtonText
+      displayOptions {
+        darkLightToggle
+        textAlignment
+        textPosition
+      }
+      promoLabel
+      promotedContent{
+        __typename
+        ... on Article{
+          title
+        }
+        ... on Document{
+          title
+        }
+        ... on Podcast{
+          title
+        }
+        ... on Slideshow{
+          title
+        }
+        ... on Video{
+          title
+        }
+        ... on Webinar{
+          title
+        }
+      }
+    }
+  }
+}

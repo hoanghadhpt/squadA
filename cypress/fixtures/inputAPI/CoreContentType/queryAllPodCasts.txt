@@ -1,5 +1,5 @@
 query {
-  all_podcast{
+  all_podcast {
     meta {
       total
     }
@@ -21,7 +21,7 @@ query {
         title
         contributorDescription
         contributorName
-   			url
+        url
         contributorRole
         contributorImage {
           image {
@@ -49,12 +49,33 @@ query {
       atAGlance {
         shortGlanceVersions
       }
-      termSelector {
-        historyOfPrimaryTerm
-        primaryTerm
-        primaryTermInRealText
-        primaryCategoryBelonged
-        secondaryTerm
+      topicSelector {
+        mainTopic {
+          __typename
+          ... on TopicPrimary {
+            title
+            url
+          }
+          ... on TopicSecondary {
+            title
+            url
+          }
+          ... on TopicTertiary {
+            title
+            url
+          }
+        }
+        additionalTopics {
+          ... on TopicPrimary {
+            title
+          }
+          ... on TopicSecondary {
+            title
+          }
+          ... on TopicTertiary {
+            title
+          }
+        }
       }
       keywords {
         keywordBranding {
@@ -82,147 +103,20 @@ query {
         noIndex
       }
       relatedInlineContent {
-        relatedItem {
-          ... on Article {
-            uid
-
-
-            url
-   
-
-            contributor {
-              title
-              uid
-              url
-              userRoles
-              contributorName
-              contributorDescription
-              contributorRole
-              contributorImage {
-                image {
-                  url
-                }
-                imageAltText
-              }
-            }
-            featuredImageGroup {
-              featuredImage {
-                url
-              }
-              featuredImageCredit
-              featuredImageCaption
-            }
-
-          }
-          ... on Webinar {
-            title
-            mobileHeadline
-            url
-            publishedDate
-            summary
-            contributor {
-              title
-              url
-              contributorName
-              contributorDescription
-              contributorImage {
-                image {
-                  url
-                }
-                imageAltText
-              }
-            }
-            featuredImageGroup {
-              featuredImage {
-                url
-              }
-              featuredImageCredit
-              featuredImageCaption
-            }
-            termSelector {
-              historyOfPrimaryTerm
-              primaryTerm
-              primaryTermInRealText
-              primaryCategoryBelonged
-              secondaryTerm
-            }
-            webinarGroup {
-              webinarId
-              webinarUrl
-              webinarService
-              webinarTimezone
-              duration {
-                duration
-              }
-            }
-          }
-          ... on Slideshow {
-            title
-            mobileHeadline
-            url
-            publishedDate
-            summary
-            contributor {
-              title
-              url
-              contributorName
-              contributorDescription
-              contributorRole
-              contributorImage {
-                image {
-                  url
-                }
-                imageAltText
-              }
-            }
-            contentFormat {
-              title
-              uid
-              pageDescription
-              updatedAt
-              updatedBy
-              url
-              locale
-            }
-            featuredImageGroup {
-              featuredImage {
-                url
-              }
-              featuredImageCredit
-              featuredImageCaption
-            }
-            atAGlance {
-              shortGlanceVersions
-            }
-            termSelector {
-              historyOfPrimaryTerm
-              primaryTerm
-              primaryTermInRealText
-              primaryCategoryBelonged
-              secondaryTerm
-            }
-          }
-          ... on BasicPage {
-            uid
-            title
-            mobileHeadline
-            url
-            summary
-            seo {
-              metaTitle
-              metaDescription
-              canonicalUrl
-              noIndex
-            }
-          }
+        relatedItem{
+          title
+          uid
+          url
         }
       }
- 		podcast{
-      duration{duration}
-      podcastId
-      podcastLink
-      podcastService
-    }
+      podcast {
+        duration {
+          duration
+        }
+        podcastId
+        podcastLink
+        podcastService
+      }
     }
   }
 }

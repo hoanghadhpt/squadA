@@ -1,0 +1,58 @@
+[
+   
+    {
+        "contentType": "Modular Content Cards",
+       "queryBody": "ModularBlocks/moduleContentCards.txt",
+        "pageContent": "modular_content_cards"
+    },
+    {
+        "contentType": "Modular Content Spotlight",
+       "queryBody": "ModularBlocks/moduleContentSpotlight.txt",
+        "pageContent": "modular_content_spotlight"
+    },
+    {
+        "contentType": "Modular Event Promo",
+       "queryBody": "ModularBlocks/moduleEventPromo.txt",
+        "pageContent": "modular_event_promo"
+    },
+    {
+        "contentType": "Modular External Link",
+       "queryBody": "ModularBlocks/moduleExternalLink.txt",
+        "pageContent": "modular_external_link"
+    },
+    {
+        "contentType": "Modular Featured",
+       "queryBody": "ModularBlocks/moduleFeatured.txt",
+        "pageContent": "modular_featured"
+    },
+    {
+        "contentType": "Modular Latest Content",
+       "queryBody": "ModularBlocks/moduleLatestContent.txt",
+        "pageContent": "module_latest_content"
+    },
+    {
+        "contentType": "Modular Link List",
+       "queryBody": "ModularBlocks/moduleLinkList.txt",
+        "pageContent": "module_link_list"
+    },
+    {
+        "contentType": "Modular Newsletter Promo",
+       "queryBody": "ModularBlocks/moduleNewsletterPromo.txt",
+        "pageContent": "modular_newsletter_promo"
+    },
+    {
+        "contentType": "Modular Section Promo",
+       "queryBody": "ModularBlocks/moduleSectionPromo.txt",
+        "pageContent": "module_section_promo"
+    },
+    {
+        "contentType": "Modular Section Promo",
+       "queryBody": "ModularBlocks/moduleSectionPromoV2.txt",
+        "pageContent": "module_section_promo_v2"
+    },
+    {
+        "contentType": "Modular Three Column",
+       "queryBody": "ModularBlocks/moduleThreeColumnHighlight.txt",
+        "pageContent": "module_three_column_highlight"
+    }
+]

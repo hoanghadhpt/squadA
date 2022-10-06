@@ -1,8 +1,6 @@
 query pageContributor {
-  page_contributor(limit: 5
-    sort: newest
-    
-    where: { url: "/author/denzel-washington" })
+  page_contributor(
+    where: { url: "/author/industry-voice-by-unified-ag-solutions-uas" })
     # where:{url:"/author/test"})
   {
     meta {
@@ -57,11 +55,7 @@ query pageContributor {
         contributor{
           contributorName
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Document {
         title
@@ -80,11 +74,7 @@ query pageContributor {
           title
           pageDescription
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Webinar {
         title
@@ -103,11 +93,7 @@ query pageContributor {
           title
           pageDescription
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Slideshow {
         title
@@ -126,11 +112,7 @@ query pageContributor {
           title
           pageDescription
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Podcast {
         title
@@ -149,11 +131,7 @@ query pageContributor {
           title
           pageDescription
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+        
       }
       ... on Video {
         title
@@ -172,11 +150,7 @@ query pageContributor {
           title
           pageDescription
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
-        }
+       
       }
     }
   }

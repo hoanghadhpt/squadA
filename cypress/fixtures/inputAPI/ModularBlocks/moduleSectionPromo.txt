@@ -1,0 +1,56 @@
+query {
+  all_module_section_promo(
+    where: { uidIn: ["blt2de333e1df03ebe7", "blt37735da997003323"] }
+  ) {
+    entries {
+      items{
+        __typename
+        ... on Article{
+          title
+          summary
+          url
+        }
+        ... on Document{
+          title
+          summary
+          url
+        }
+        ... on Event{
+          title
+          eventDescription
+          url
+        }
+        ... on ExternalLink{
+          title
+          summary
+          url
+        }
+        ... on Magazine{
+          title
+          summary
+          url
+        }
+        ... on Podcast{
+          title
+          summary
+          url
+        }
+        ... on Slideshow{
+          title
+          summary
+          url
+        }
+        ... on Video{
+          title
+          summary
+          url
+        }
+        ... on Webinar{
+          title
+          summary
+          url
+        }
+      }
+    }
+  }
+}
