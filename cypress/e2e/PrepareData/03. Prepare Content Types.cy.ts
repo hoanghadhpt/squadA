@@ -6,7 +6,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
 
-describe(`Prepare Data`, () => {
+describe(`Prepare Content Types entries`, () => {
     beforeEach(() => {})
     const apiPost = new APIPost()
     const apiExpected = new ApiShareObjects()
@@ -17,9 +17,7 @@ describe(`Prepare Data`, () => {
                 contentType: testDataRow.contentType,
                 entryBody: testDataRow.entryData
             };
-            context(`Create: ${
-                testData.contentType
-            }`, () => {
+            context(`Create: ${testData.contentType}`, () => {
                 it(`GIVEN I create entry for ${
                     testData.contentType
                 } `, () => {

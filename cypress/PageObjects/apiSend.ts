@@ -24,16 +24,18 @@ class APIPost {
 
   updateBodyAndCreateEntry(entry: any, jsonBody: any) {
     var j1 = JSON.parse(jsonBody);
+    
     // if (entry === "content_format") {
     //   j1.entry.title = `abcdbcbd`
     // } else {
     //   j1.entry.title = `[Automation Test] - ${entry} ${new Date().toLocaleString()}`;
     // }
     const files = [
-      "_Keywords.txt",
-      "_Contributor.txt",
-      "_Subbrand.txt",
-      "_ContentFormat.txt",
+      "keyword.txt",
+      "contributor.txt",
+      "subbrand.txt",
+      "content_format.txt",
+      "topic_primary.txt",
     ];
     const contents = [];
 
@@ -47,15 +49,61 @@ class APIPost {
       })
       .then(() => {
         // do whatever you want after all reading files is done
-
-        j1.entry["keywords"][0]["uid"] = contents[0];
-        j1.entry["contributor"][0]["uid"] = contents[1];
-        j1.entry["subbrand"][0]["uid"] = contents[2];
-        j1.entry["content_format"][0]["uid"] = contents[3];
-
+        // update keyword
+        if (j1.entry["keywords"] !== undefined) {
+          if (j1.entry["keywords"].length === 0) {
+            j1.entry["keywords"].push(contents[0]);
+            cy.log("Pushed content to Keywords");
+          } else {
+            j1.entry["keywords"][0]["uid"] = contents[0];
+            cy.log("Updated keywords uid");
+          }
+        }
+        //update contributor
+        if (j1.entry["contributor"] !== undefined) {
+          if (j1.entry["contributor"].length === 0) {
+            j1.entry["contributor"].push(contents[1]);
+            cy.log("Pushed content to contributor");
+          } else {
+            j1.entry["contributor"][0]["uid"] = contents[1];
+            cy.log("Updated contributor uid");
+          }
+        }
+        //update subbrand
+        if (j1.entry["subbrand"] !== undefined) {
+          if (j1.entry["subbrand"].length === 0) {
+            j1.entry["subbrand"].push(contents[2]);
+            cy.log("Pushed content to subbrand");
+          } else {
+            j1.entry["subbrand"][0]["uid"] = contents[2];
+            cy.log("Updated subbrand uid");
+          }
+        }
+        //update content format
+        if (j1.entry["content_format"] !== undefined) {
+          if (j1.entry["content_format"].length === 0) {
+            j1.entry["content_format"].push(contents[3]);
+            cy.log("Pushed content to subbrand");
+          } else {
+            j1.entry["content_format"][0]["uid"] = contents[3];
+            cy.log("Updated content_format uid");
+          }
+        }
+        //update mainTopic
+        if (j1.entry["topic_primary"] !== undefined) {
+          if (j1.entry["topic_primary"].length === 0) {
+            j1.entry["topic_primary"].push(contents[4]);
+            cy.log("Pushed content to topic_primary");
+          } else {
+            j1.entry.topic_selector.main_topic[0].uid = contents[4];
+            cy.log("Updated topic_primary uid");
+          }
+        }
         // updated uid for bodyJSON
-        // create entry
-        this.postCreateEntry(entry, j1);
+        // update title
+        j1.entry.title = `[Automation Test] - ${entry} ${new Date().toLocaleString()}`;
+        cy.log(j1)
+        this.createUpdatedEntry(entry, j1);
       });
   }
 
@@ -77,12 +125,11 @@ class APIPost {
   postCreateEntry(entry: any, body: any) {
     // update title
     var jBody = JSON.parse(body);
-    cy.log(entry)
-    if(entry === 'content_format'){
-        jBody.entry.title = `[Auto] ${new Date().toLocaleTimeString()}`;
-    }
-    else{
-        jBody.entry.title = `[Automation Test] - ${entry} ${new Date().toLocaleString()}`;
+    cy.log(entry);
+    if (entry === "content_format") {
+      jBody.entry.title = `[Auto] ${new Date().toLocaleTimeString()}`;
+    } else {
+      jBody.entry.title = `[Automation Test] - ${entry} ${new Date().toLocaleString()}`;
     }
     cy.request({
       method: "POST",
@@ -96,6 +143,36 @@ class APIPost {
         "Content-Type": "application/json",
       },
       body: jBody,
+    }).then((res) => {
+      cy.wrap(res.status).as("status");
+      cy.wrap(res.headers).as("headers");
+      cy.wrap(res.body).as("body");
+      cy.wrap(res).as("resBody");
+      // res.body.entry['uid']
+      // write to file
+      cy.log(entry);
+
+      cy.writeFile(
+        "./cypress/fixtures/sampleData/entryUID/" + entry + ".txt",
+        res.body.entry["uid"]
+      );
+    });
+  }
+
+  createUpdatedEntry(entry: any, body: any) {
+    // update title
+    cy.request({
+      method: "POST",
+      url:
+        "https://eu-api.contentstack.com/v3/content_types/" +
+        entry +
+        "/entries?locale=en-us",
+      headers: {
+        api_key: Cypress.env("api_key"),
+        authtoken: Cypress.env("authtoken"),
+        "Content-Type": "application/json",
+      },
+      body: body,
     }).then((res) => {
       cy.wrap(res.status).as("status");
       cy.wrap(res.headers).as("headers");

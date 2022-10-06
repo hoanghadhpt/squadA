@@ -2,5 +2,17 @@
     {
         "contentType": "article",
         "entryData": "sampleData/entryData/_Article.txt"
+    },
+    {
+        "contentType": "document",
+        "entryData": "sampleData/entryData/_Document.txt"
+    },
+    {
+        "contentType": "event",
+        "entryData": "sampleData/entryData/_Event.txt"
+    },
+    {
+        "contentType": "external_link",
+        "entryData": "sampleData/entryData/_ExternalLink.txt"
     }
 ]
