@@ -1,0 +1,8 @@
+fragment FeatureImageItem on FeatureImage{
+    featuredImage{
+        url
+    }
+    featuredImageCredit
+    featuredImageCaption
+    imageAltText
+}

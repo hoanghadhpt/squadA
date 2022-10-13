@@ -40,13 +40,7 @@ query {
         url
         locale
       }
-      featuredImageGroup {
-        featuredImage {
-          url
-        }
-        featuredImageCredit
-        featuredImageCaption
-      }
+      ... FeatureImageItem
       atAGlance {
         shortGlanceVersions
       }

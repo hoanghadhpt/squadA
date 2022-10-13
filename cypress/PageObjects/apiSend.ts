@@ -1,3 +1,4 @@
+import { request, GraphQLClient } from 'graphql-request'
 export const apiPost = new class APIPost {
 
     updateEntry(entry: any, uid: any, body: any) {
@@ -140,19 +141,11 @@ export const apiPost = new class APIPost {
     }
 
     graphqlPost(requestMethod: string, requestUrl: string, queryBody: any) {
-        cy.request({
-            method: requestMethod,
+        request({
             url: requestUrl,
-            body: {
-                query: queryBody
-            }
-        }).then((res) => {
-            cy.wrap(res).as('resBody')
-            cy.wrap(res.status).as('status');
-            // cy.task('setStatus', res.status);
-            cy.wrap(res.headers).as('headers');
-            cy.wrap(res.body).as('body');
-        }).as('req');
+            document: queryBody
+          }).then((data) => console.log(data))
+        
     }
 
     postGetEntryByUID(entry: any, uid: string) {
