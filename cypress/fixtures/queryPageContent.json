@@ -38,5 +38,10 @@
         "contentType": "Page Event",
        "queryBody": "PageContent/pageEvent.txt",
         "pageContent": "page_event"
+    },
+    {
+        "contentType": "Page Search",
+       "queryBody": "PageContent/pageSearch.txt",
+        "pageContent": "page_search"
     }
 ]

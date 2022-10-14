@@ -1,0 +1,168 @@
+query {
+  page_search(
+    limit:100
+    where:{
+      searchTerm:"and"
+    }
+  ){
+    items{
+      __typename
+      ... on Article{
+        title
+        url
+        uid
+        summary
+        publishedDate
+        readTime
+        topicSelector{
+          mainTopic{
+            __typename
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+      
+      ... on Document{
+        title
+        url
+        uid
+        summary
+        publishedDate
+        readTime
+        topicSelector{
+          mainTopic{
+            __typename
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+      
+      ... on Podcast{
+        title
+        url
+        uid
+        summary
+        publishedDate
+        readTime
+        topicSelector{
+          mainTopic{
+            __typename
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+      
+      ... on Slideshow{
+        title
+        url
+        uid
+        summary
+        publishedDate
+        readTime
+        topicSelector{
+          mainTopic{
+            __typename
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+      
+      ... on Video{
+        title
+        url
+        uid
+        summary
+        publishedDate
+        readTime
+        topicSelector{
+          mainTopic{
+            __typename
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+      
+      ... on Webinar{
+        title
+        url
+        uid
+        summary
+        publishedDate
+        readTime
+        topicSelector{
+          mainTopic{
+            __typename
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+        }
+      }
+      #
+    }
+  }
+}
