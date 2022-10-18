@@ -3,7 +3,11 @@
       "types": ["cypress", "cypress-grep"],
       "strict": true,
       "allowJs": true,
-      "noEmit": true
+      "noEmit": true,
+      "target": "es6",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "moduleResolution": "node"
     },
     "include": ["cypress/e2e/model.d.ts", "cypress/e2e/*spec.ts"],
     "files": ["cypress/e2e/*.spec.ts"]
