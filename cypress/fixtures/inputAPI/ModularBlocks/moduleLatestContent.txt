@@ -15,63 +15,242 @@ query {
         itemsLatestSection1{
           __typename
           ... on Article{
-            title
-            uid
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          ... on Document{
-            title
-            uid
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
           }
-          ... on Event{
-            title
-            uid
+        }
+           ... on Document{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          ... on ExternalLink{
-            title
-            uid
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
           }
+        }
+         ... on Event{
+          title
+          eventDescription
+          url
+          eventDetails{
+            endDate
+            startDate
+            eventUrl
+            eventLogo{ 
+            	logoFile{url}
+            	eventLogoAlt
+            }
+            eventType
+            buttons{
+              buttonLink
+              buttonName
+            }
+          }
+        }
+        ... on ExternalLink{
+          title
+          summary
+          url
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
+        }
           ... on Magazine{
-            title
-            uid
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          ... on Podcast{
-            title
-            uid
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
           }
-          ... on Slideshow{
-            title
-            uid
+        }
+           ... on Podcast{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          ... on Video{
-            title
-            uid
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
           }
-          ... on Webinar{
-            title
-            uid
+        }
+           ... on Slideshow{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
+        }
+           ... on Video{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
+          }
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
+        }
+           ... on Webinar{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
+          }
+           topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
+        }
         }
         itemsLatestSection2{
           __typename
           ... on Article{
             title
-            uid
+            url
           }
           ... on Document{
             title
-            uid
+            url
           }
           ... on Event{
             title
-            uid
+            url
           }
           ... on ExternalLink{
             title
-            uid
+            url
           }
           ... on Magazine{
             title
-            uid
+            url
           }
           ... on Podcast{
             title
@@ -83,11 +262,11 @@ query {
           }
           ... on Video{
             title
-            uid
+            url
           }
           ... on Webinar{
             title
-            uid
+            url
           }
         }
       }
