@@ -3,19 +3,6 @@ query MyQuery {
   all_magazine(
     skip: 0
     limit: 10
-    desc: "publishedDate"
-    where: {
-      #contributor: "blt228efa0b5243123c"
-      #keywordSlug: "/keyword/youth"
-      #keywordIn: "bltf1e328058c518a42"
-      #uid: "blt02e5b7d2f22c7881"
-      #url: "/magazine/test-maga-t1"
-      #sponsorContentSetting: { sponsorshipGatingSponsorFlag: false }
-      #publishedDateGte:""
-      #publishedDateLte:""
-      #topicPrimaryIn:"/farm-life"
-      #topicSecondaryIn:"/market-data/cotton-prices"
-    }
   ) {
     items {
       __typename
