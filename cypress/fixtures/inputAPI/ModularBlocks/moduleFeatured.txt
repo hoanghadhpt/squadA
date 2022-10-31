@@ -1,0 +1,57 @@
+query {
+  all_module_featured(
+    where: { uidIn: ["blt8c2990d6b72c1e07", "blt71864c3fe8030df9"] }
+  ) {
+    entries {
+      meta {
+        entry {
+          title
+          moduleDisplayOption
+        }
+        total
+      }
+      featured {
+        __typename
+        ... on Article {
+          title
+        }
+        ... on Document {
+          title
+        }
+        ... on Podcast {
+          title
+        }
+        ... on Slideshow {
+          title
+        }
+        ... on Video {
+          title
+        }
+        ... on Webinar {
+          title
+        }
+      }
+      latest {
+        __typename
+        ... on Article {
+          title
+        }
+        ... on Document {
+          title
+        }
+        ... on Podcast {
+          title
+        }
+        ... on Slideshow {
+          title
+        }
+        ... on Video {
+          title
+        }
+        ... on Webinar {
+          title
+        }
+      }
+    }
+  }
+}

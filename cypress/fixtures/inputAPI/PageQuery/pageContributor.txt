@@ -1,9 +1,6 @@
 query pageContributor {
-  page_contributor(limit: 5
-    sort: newest
-    
+  page_contributor(
     where: { url: "/author/industry-voice-by-unified-ag-solutions-uas" })
-    # where:{url:"/author/test"})
   {
     meta {
       pagination {
@@ -18,7 +15,6 @@ query pageContributor {
         contributorRole
         contributorSummary
         contributorDescription
-        contentTypeUid
         userRoles
         contributorImage {
           image {
@@ -34,125 +30,241 @@ query pageContributor {
         }
       }
     }
-    items {
+    items{
       __typename
       ... on Article {
         title
-        uid
         url
         summary
         publishedDate
-        featuredImageGroup {
-          featuredImage {
-            url
-          }
-          featuredImageCredit
-          featuredImageCaption
-        }
-        contentTypeUid
-        contentFormat {
-          title
-          pageDescription
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
         }
         contributor{
           contributorName
+          contributorImage{
+            image{url}
+          }
         }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
       }
-      ... on Document {
+     ... on Document {
         title
         url
         summary
         publishedDate
-        featuredImageGroup {
-          featuredImage {
-            url
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
           }
-          featuredImageCredit
-          featuredImageCaption
         }
-        contentTypeUid
-        contentFormat {
-          title
-          pageDescription
-        }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
       }
-      ... on Webinar {
+     ... on Webinar {
         title
         url
         summary
         publishedDate
-        featuredImageGroup {
-          featuredImage {
-            url
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
           }
-          featuredImageCredit
-          featuredImageCaption
         }
-        contentTypeUid
-        contentFormat {
-          title
-          pageDescription
-        }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
       }
-      ... on Slideshow {
+     ... on Podcast {
         title
         url
         summary
         publishedDate
-        featuredImageGroup {
-          featuredImage {
-            url
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
           }
-          featuredImageCredit
-          featuredImageCaption
         }
-        contentTypeUid
-        contentFormat {
-          title
-          pageDescription
-        }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
       }
-      ... on Podcast {
+     ... on Slideshow {
         title
         url
         summary
         publishedDate
-        featuredImageGroup {
-          featuredImage {
-            url
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
           }
-          featuredImageCredit
-          featuredImageCaption
         }
-        contentTypeUid
-        contentFormat {
-          title
-          pageDescription
-        }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
       }
       ... on Video {
@@ -160,22 +272,46 @@ query pageContributor {
         url
         summary
         publishedDate
-        featuredImageGroup {
-          featuredImage {
-            url
+        body
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
+        contributor{
+          contributorName
+          contributorImage{
+            image{url}
           }
-          featuredImageCredit
-          featuredImageCaption
         }
-        contentTypeUid
-        contentFormat {
-          title
-          pageDescription
-        }
-        termSelector {
-          primaryTerm
-          primaryTermInRealText
-          secondaryTerm
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
       }
     }

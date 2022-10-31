@@ -35,5 +35,10 @@
         "contentType": "All SlideShow",
        "queryBody": "CoreContentType/queryAllSlideShows.txt",
         "pageContent": "all_slideshow"
+    },
+    {
+        "contentType": "All Magazine",
+       "queryBody": "CoreContentType/queryAllMagazine.txt",
+        "pageContent": "all_magazine"
     }
 ]

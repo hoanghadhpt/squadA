@@ -1,5 +1,7 @@
 query {
-  page_content(url: "/beef/selecting-your-next-herd-sire") {
+  page_content(
+    url: "/cotton-prices/10-ways-ffa-is-growing-tomorrow-s-ag-leaders"
+  ) {
     content {
       ... on Article {
         title
@@ -22,7 +24,19 @@ query {
         bodyJson
         topicSelector {
           mainTopic {
-           __typename
+            __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
           }
           additionalTopics {
             __typename
@@ -73,7 +87,7 @@ query {
         bodyJson
         topicSelector {
           mainTopic {
-           __typename
+            __typename
           }
           additionalTopics {
             __typename
@@ -134,7 +148,18 @@ query {
         bodyJson
         topicSelector {
           mainTopic {
-           __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
           }
           additionalTopics {
             __typename
@@ -244,7 +269,18 @@ query {
         bodyJson
         topicSelector {
           mainTopic {
-           __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
           }
           additionalTopics {
             __typename
@@ -305,7 +341,18 @@ query {
         bodyJson
         topicSelector {
           mainTopic {
-           __typename
+            ... on TopicPrimary {
+              title
+              url
+            }
+            ... on TopicSecondary {
+              title
+              url
+            }
+            ... on TopicTertiary {
+              title
+              url
+            }
           }
           additionalTopics {
             __typename

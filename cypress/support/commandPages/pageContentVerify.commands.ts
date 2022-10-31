@@ -1,7 +1,20 @@
-class PageContent {
-  verifyRequiredFieldNotNull(contentType: string, requiredField: string) {
-    cy.log(contentType);
+
+export {};
+
+declare global {
+    namespace Cypress {
+        interface Chainable<Subject> {
+            pageContentRequiredFieldNotNull(contentType: string, requiredField: string): Chainable<void>;
+        }
+    }
+}
+
+// Repeated across test scripts
+Cypress.Commands.add('pageContentRequiredFieldNotNull', (contentType: string, requiredField: string) => {
+  
+  cy.log(contentType)
     if (contentType === "page_event") {
+      //debugger
       cy.task("getBody").then((resBody) => {
         if (resBody.data["page_events"].content === undefined) {
           const contentBody = resBody.data["page_events"].items[0];
@@ -26,6 +39,4 @@ class PageContent {
         }
       });
     }
-  }
-}
-export default PageContent;
+});

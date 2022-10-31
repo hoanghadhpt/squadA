@@ -1,39 +1,19 @@
-query{
-  modular_external_link(uid:"blt4833a03e3a8f01b4"){
-    title
-    contentTypeUid
-    ctaButton{
-      ctaButtonText
-      ctaButtonUrl
-      __typename
-    }
-    externalLinks{
-      contentFormat{
-        title
-      }
+query {
+  all_module_external_link(
+    where: { uidIn: ["blt4833a03e3a8f01b4", "bltf024a475fe28fcd3"] }
+  ) {
+    entries {
+      title
       contentTypeUid
-      contributor{
-        contributorName
+      ctaButton{
+        ctaButtonText
+        ctaButtonUrl
       }
-      externalLink
-      featuredImageGroup{
-        featuredImage{url}
-        featuredImageCaption
-        featuredImageCredit
-        imageAltText
-      }
-      keywords{
+      externalLinks{
         title
-        url
+        uid
       }
-      publishedDate
-      seo{
-        canonicalUrl
-        metaDescription
-        metaTitle
-        noIndex
-      }
+      moduleLabel
     }
-    moduleLabel
   }
 }

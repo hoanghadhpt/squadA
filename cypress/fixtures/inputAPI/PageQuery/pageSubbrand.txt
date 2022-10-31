@@ -7,120 +7,289 @@ query {
       url:"/subbrand"
     }
   ){
-    items {
+     items{
       __typename
       ... on Article {
         title
-        uid
+        url
+        summary
+        publishedDate
         body
-        bodyJson
-        readTime
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
-          contributorImage{image{url}
-          imageAltText}
+          contributorImage{
+            image{url}
+          }
         }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCaption
-          featuredImageCredit
-          imageAltText
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
-        publishedDate
       }
-      ... on  Document{
+     ... on Document {
         title
-        uid
+        url
+        summary
+        publishedDate
         body
-        bodyJson
-        readTime
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
-          contributorImage{image{url}
-          imageAltText}
+          contributorImage{
+            image{url}
+          }
         }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCaption
-          featuredImageCredit
-          imageAltText
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
-        publishedDate
       }
-      ... on  Podcast{
+     ... on Webinar {
         title
-        uid
+        url
+        summary
+        publishedDate
         body
-        bodyJson
-        readTime
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
-          contributorImage{image{url}
-          imageAltText}
+          contributorImage{
+            image{url}
+          }
         }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCaption
-          featuredImageCredit
-          imageAltText
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
-        publishedDate
       }
-      ... on  Slideshow{
+     ... on Podcast {
         title
-        uid
+        url
+        summary
+        publishedDate
         body
-        bodyJson
-        readTime
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
-          contributorImage{image{url}
-          imageAltText}
+          contributorImage{
+            image{url}
+          }
         }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCaption
-          featuredImageCredit
-          imageAltText
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
-        publishedDate
       }
-      ... on  Video{
+     ... on Slideshow {
         title
-        uid
+        url
+        summary
+        publishedDate
         body
-        bodyJson
-        readTime
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
-          contributorImage{image{url}
-          imageAltText}
+          contributorImage{
+            image{url}
+          }
         }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCaption
-          featuredImageCredit
-          imageAltText
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
-        publishedDate
       }
-      ... on Webinar {
+      ... on Video {
         title
-        uid
+        url
+        summary
+        publishedDate
         body
-        bodyJson
+        featuredImageGroup{
+          imageAltText
+          featuredImage{url}
+        }
         contributor{
           contributorName
-          contributorImage{image{url}
-          imageAltText}
+          contributorImage{
+            image{url}
+          }
         }
-        featuredImageGroup{
-          featuredImage{url}
-          featuredImageCaption
-          featuredImageCredit
-          imageAltText
+				topicSelector{
+          mainTopic{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
+          additionalTopics{
+            ... on TopicPrimary{
+              title
+              url
+            }
+            ... on TopicSecondary{
+              title
+              url
+            }
+            ... on TopicTertiary{
+              title
+              url
+            }
+          }
         }
-        publishedDate
       }
     }
     meta {

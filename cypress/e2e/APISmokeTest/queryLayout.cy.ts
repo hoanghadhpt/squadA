@@ -5,14 +5,14 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
 
-describe(`Query taxonomy`, () => {
+describe(`Smoke test`, () => {
     beforeEach(() => {
         
       })
     const queryGraphql = new queryPageContent()
     const apiExpected = new ApiShareObjects()
-    const testData = require("../../fixtures/queryTaxonomy.json");
-    describe("Query all taxonomy", () => {
+    const testData = require("../../fixtures/queryLayout.json");
+    describe("Query page layout", () => {
         testData.forEach((testDataRow: any) => {
             const testData = {
                 contentType: testDataRow.contentType,
@@ -29,32 +29,25 @@ describe(`Query taxonomy`, () => {
             })
         
             it("Then I expected status code as 200", ()=>{
-                // apiExpected.verifyStatus(200 ) 
+                //apiExpected.verifyStatus(200 ) 
                 cy.verifyStatus(200 ) 
             })
             
-            it("And the items list should be not null", () =>{
-                // apiExpected.verifyBodyNotNull(testData.pageContent)   
-                cy.verifyBodyNotNull(testData.pageContent)  
-            })
-            describe("And Required Field should not be empty", () =>{
-                it('Title field should not be empty', ()=>{
-                    //apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'title');
-                    cy.verifyRequiredFieldNotNull(testData.pageContent, 'title') 
-                })
-                it('Url should not be empty', ()=>{
-                    if(testData.pageContent != 'all_country')
-                    {
-                        // apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'url'); 
-                        cy.verifyRequiredFieldNotNull(testData.pageContent, 'url') 
-                    }
-                }) 
-                // it()
+            it("And Required Field should not be empty", () =>{
+              if(testData.pageContent === 'navigation')  {
+                    //apiExpected.verifyNavigationNotNull(testData.pageContent);
+                    cy.verifyNavigationNotNull(testData.pageContent);
+                }
+                else{
+                    //apiExpected.verifyFooterNotNull(testData.pageContent);
+                    cy.verifyFooterNotNull(testData.pageContent);
+                }
             })
 
+
             it("And query not return error", () => {
-                // apiExpected.verifyNoError(testData.pageContent);
-                cy.verifyNoError()
+                //apiExpected.verifyNoError(testData.pageContent);
+                cy.verifyNoError(testData.pageContent);
               });
         })
     })

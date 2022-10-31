@@ -1,136 +1,51 @@
-# Write your query or mutation here
-query {
-  page_event (
-    limit:10
-    page:1
-    where:{
-      url:"/events/flower-festival"
-    }
-  ){
+query  {
+  page_events(
+    limit: 25
+  ) {
     meta {
       pagination {
-        page
         limit
+        page
         total
         totalPage
       }
-      entry {
-        title
-        eventDescription
-        eventDetails{
-          eventLogo{logoFile{url}}
-          eventUrl
-          button1Link
-          button1Name
-          button2Link
-          button2Name
-          startDate
-          endDate
-          location
-        }
-        uid
-      }
     }
     items {
-      #__typename
-      ... on Article {
-        title
-        url
-        mobileHeadline
-        summary
-        body
-        termSelector{
-          primaryTerm
-        }
-        publishedDate
-        #__typename
-      }
-      ... on Document {
-        title
-        url
-         mobileHeadline
-        summary
-        body
-        termSelector{
-          primaryTerm
-        }
-        publishedDate
-        __typename
-      }
-      ... on Podcast {
-        title
-        url
-         mobileHeadline
-        summary
-        body
-        termSelector{
-          primaryTerm
-        }
-        # publishedDate
-        __typename
-      }
-      ... on Video {
-        title
-        url
-         mobileHeadline
-        summary
-        body
-        termSelector{
-          primaryTerm
-        }
-        publishedDate
-        __typename
-      }
-      ... on Slideshow {
-        title
-        url
-         mobileHeadline
-        summary
-        body
-        termSelector{
-          primaryTerm
-        }
-        publishedDate
-        __typename
-      }
-      ... on Webinar {
-        title
-        url
-         mobileHeadline
-        summary
-        body
-        termSelector{
-          primaryTerm
-        }
-        publishedDate
-        __typename
-      }
-        ... on Event {
-        title
-        url
-          eventDescription
-        eventDetails{
-          startDate
-          endDate
-          location
-          eventLogo{
-            __typename
-            logoFile{url}
-            eventLogoAlt
+      title
+      url
+      eventDescription
+      uid
+      createdAt
+      createdBy
+      locale
+      updatedAt
+      updatedBy
+      eventDetails {
+        startDate
+        endDate
+        eventLogo {
+          eventLogoAlt
+          logoFile {
+            url
           }
         }
-        __typename
-      }
-      ... on ExternalLink{
-        title
-        mobileHeadline
-        publishedDate
-        url
-        summary
-        externalLink
-        termSelector{
-          primaryTerm
+        buttons {
+          buttonLink
+          buttonName
         }
+        eventType
+        eventUrl
+        location
+      }
+      publishDetails {
+        locale
+        time
+      }
+      seo {
+        canonicalUrl
+        metaDescription
+        metaTitle
+        noIndex
       }
     }
   }

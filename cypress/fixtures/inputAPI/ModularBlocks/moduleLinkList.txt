@@ -1,42 +1,41 @@
 query {
-  all_module_content_spotlight(
-    where: { uidIn: ["bltbd430d2b41e36ca6", "bltb2841008cdfd0f1d"] }
+  all_module_link_list(
+    where: { uidIn: ["blt1252dd66c7d0029f", "blta1958404cbfc23d0"] }
   ) {
     entries {
-      title
-      uid
-      ctaButtonText
-      displayOptions {
-        darkLightToggle
-        textAlignment
-        textPosition
+      meta {
+        entry {
+          title
+      		contentListOption
+          dynamicRecentContent{
+            byContentTypes
+          }
+          manualCuratedContentGroup{
+            manualCuratedContent{
+              contentTypeUid
+              uid
+            }
+            manualCuratedContentLimit
+          }
+        }
+        total
       }
-      promoLabel
-      promotedContent{
+       items{
         __typename
         ... on Article{
           title
+          summary
           url
-          contributor{
-            contributorName
-            contributorImage{image{url}}
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          topicSelector{
+          contributor{
+            title
+            url
+          }
+           topicSelector{
             mainTopic{
-              ... on TopicPrimary{
-                title
-                url
-              }
-              ... on TopicSecondary{
-                title
-                url
-              }
-              ... on TopicTertiary{
-                title
-                url
-              }
-            }
-            additionalTopics{
               ... on TopicPrimary{
                 title
                 url
@@ -54,27 +53,18 @@ query {
         }
         ... on Document{
           title
+          summary
           url
-          contributor{
-            contributorName
-            contributorImage{image{url}}
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          topicSelector{
+          contributor{
+            title
+            url
+          }
+           topicSelector{
             mainTopic{
-              ... on TopicPrimary{
-                title
-                url
-              }
-              ... on TopicSecondary{
-                title
-                url
-              }
-              ... on TopicTertiary{
-                title
-                url
-              }
-            }
-            additionalTopics{
               ... on TopicPrimary{
                 title
                 url
@@ -90,13 +80,29 @@ query {
             }
           }
         }
-        ... on Podcast{
+        ... on Event{
           title
+          eventDescription
           url
-          contributor{
-            contributorName
-            contributorImage{image{url}}
+          eventDetails{
+            endDate
+            startDate
+            eventUrl
+            eventLogo{ 
+            	logoFile{url}
+            	eventLogoAlt
+            }
+            eventType
+            buttons{
+              buttonLink
+              buttonName
+            }
           }
+        }
+        ... on ExternalLink{
+          title
+          summary
+          url
           topicSelector{
             mainTopic{
               ... on TopicPrimary{
@@ -112,7 +118,35 @@ query {
                 url
               }
             }
-            additionalTopics{
+          }
+        }
+        ... on Magazine{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
+          }
+          contributor{
+            title
+            url
+          }
+        }
+        ... on Podcast{
+          title
+          summary
+          url
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
+          }
+          contributor{
+            title
+            url
+          }
+           topicSelector{
+            mainTopic{
               ... on TopicPrimary{
                 title
                 url
@@ -130,27 +164,18 @@ query {
         }
         ... on Slideshow{
           title
+          summary
           url
-          contributor{
-            contributorName
-            contributorImage{image{url}}
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          topicSelector{
+          contributor{
+            title
+            url
+          }
+           topicSelector{
             mainTopic{
-              ... on TopicPrimary{
-                title
-                url
-              }
-              ... on TopicSecondary{
-                title
-                url
-              }
-              ... on TopicTertiary{
-                title
-                url
-              }
-            }
-            additionalTopics{
               ... on TopicPrimary{
                 title
                 url
@@ -168,27 +193,18 @@ query {
         }
         ... on Video{
           title
+          summary
           url
-          contributor{
-            contributorName
-            contributorImage{image{url}}
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          topicSelector{
+          contributor{
+            title
+            url
+          }
+           topicSelector{
             mainTopic{
-              ... on TopicPrimary{
-                title
-                url
-              }
-              ... on TopicSecondary{
-                title
-                url
-              }
-              ... on TopicTertiary{
-                title
-                url
-              }
-            }
-            additionalTopics{
               ... on TopicPrimary{
                 title
                 url
@@ -206,27 +222,18 @@ query {
         }
         ... on Webinar{
           title
+          summary
           url
-          contributor{
-            contributorName
-            contributorImage{image{url}}
+          readTime
+          featuredImageGroup{
+            featuredImage{url}
           }
-          topicSelector{
+          contributor{
+            title
+            url
+          }
+           topicSelector{
             mainTopic{
-              ... on TopicPrimary{
-                title
-                url
-              }
-              ... on TopicSecondary{
-                title
-                url
-              }
-              ... on TopicTertiary{
-                title
-                url
-              }
-            }
-            additionalTopics{
               ... on TopicPrimary{
                 title
                 url

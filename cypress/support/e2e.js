@@ -15,6 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import './commandPages/commonVerify.commands'
+import './commandPages/pageContentVerify.commands'
+import './commandPages/navigation.commands'
 import 'cypress-mochawesome-reporter/register';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
