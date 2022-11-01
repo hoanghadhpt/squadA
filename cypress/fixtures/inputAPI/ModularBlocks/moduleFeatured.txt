@@ -1,4 +1,4 @@
-query {
+query getModuleFeatured{
   all_module_featured(
     where: { uidIn: ["blt8c2990d6b72c1e07", "blt71864c3fe8030df9"] }
   ) {
@@ -14,42 +14,114 @@ query {
         __typename
         ... on Article {
           title
+          url
+          summary
+          contributor{
+            contributorName
+            url
+          }
+          featuredImageGroup{
+            featuredImage{url}
+            imageAltText
+          }
         }
         ... on Document {
           title
+          url
+          summary
+          contributor{
+            contributorName
+            url
+          }
+          featuredImageGroup{
+            featuredImage{url}
+            imageAltText
+          }
         }
         ... on Podcast {
           title
+          url
+          summary
+          contributor{
+            contributorName
+            url
+          }
+          featuredImageGroup{
+            featuredImage{url}
+            imageAltText
+          }
         }
         ... on Slideshow {
           title
+          url
+          summary
+          contributor{
+            contributorName
+            url
+          }
+          featuredImageGroup{
+            featuredImage{url}
+            imageAltText
+          }
         }
         ... on Video {
           title
+          url
+          summary
+          contributor{
+            contributorName
+            url
+          }
+          featuredImageGroup{
+            featuredImage{url}
+            imageAltText
+          }
         }
         ... on Webinar {
           title
+          url
+          summary
+          contributor{
+            contributorName
+            url
+          }
+          featuredImageGroup{
+            featuredImage{url}
+            imageAltText
+          }
         }
       }
       latest {
         __typename
         ... on Article {
           title
+          url
+          summary
         }
         ... on Document {
           title
+          url
+          summary
         }
         ... on Podcast {
           title
+          url
+          summary
         }
         ... on Slideshow {
           title
+          url
+          summary
         }
         ... on Video {
           title
+          url
+          summary
         }
         ... on Webinar {
           title
+          url
+          summary
         }
       }
     }

@@ -1,13 +1,34 @@
-query {
+query getModuleEventPromo {
   all_module_event_promo(
     where: { uidIn: ["bltcf558731c165bece", "bltd944d604f2f2f24b"] }
   ) {
     entries {
       title
       uid
-      background{
+      event {
+        title
+        locale
+        eventDescription
+        eventDetails {
+          endDate
+          startDate
+          buttons {
+            buttonLink
+            buttonName
+          }
+          eventLogo {
+            eventLogoAlt
+            logoFile {
+              url
+            }
+          }
+          eventType
+          location
+        }
+      }
+      background {
         backgroundColor
-        backgroundImage{
+        backgroundImage {
           url
         }
         backgroundImageAltText
