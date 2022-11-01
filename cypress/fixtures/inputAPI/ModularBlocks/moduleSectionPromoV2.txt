@@ -1,6 +1,6 @@
 query {
   all_module_section_promo_v2(
-    where: { uidIn: ["bltf9b9660638a63291", "bltcab8673835654c58"] }
+   where: { uidIn: ["bltf9b9660638a63291", "bltcab8673835654c58"] }
   ) {
     entries {
       meta{
@@ -19,6 +19,54 @@ query {
           }
         }
         total
+      }
+       items{
+        __typename
+        ... on Article{
+          title
+          summary
+          url
+        }
+        ... on Document{
+          title
+          summary
+          url
+        }
+        ... on Event{
+          title
+          eventDescription
+          url
+        }
+        ... on ExternalLink{
+          title
+          summary
+          url
+        }
+        ... on Magazine{
+          title
+          summary
+          url
+        }
+        ... on Podcast{
+          title
+          summary
+          url
+        }
+        ... on Slideshow{
+          title
+          summary
+          url
+        }
+        ... on Video{
+          title
+          summary
+          url
+        }
+        ... on Webinar{
+          title
+          summary
+          url
+        }
       }
     }
   }

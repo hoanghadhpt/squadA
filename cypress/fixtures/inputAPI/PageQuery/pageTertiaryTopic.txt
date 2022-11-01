@@ -2,10 +2,10 @@ query Topic{
   page_topic(
     sort: oldest
     where: {
-    url:"/parenttopic-primary/parenttopic-secondary/parenttopic-tertiary" }
+    url:"/market-data/cotton-prices/-for-auto-test-topic-tertiary" }
   ){
     items{
-      __typename
+      #__typename
       ... on Article {
         title
         url

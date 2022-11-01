@@ -16,21 +16,231 @@ query {
         __typename
         ... on Article{
           title
+          url
+          contributor{
+            contributorName
+            contributorImage{image{url}}
+          }
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+            additionalTopics{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
         }
         ... on Document{
           title
+          url
+          contributor{
+            contributorName
+            contributorImage{image{url}}
+          }
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+            additionalTopics{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
         }
         ... on Podcast{
           title
+          url
+          contributor{
+            contributorName
+            contributorImage{image{url}}
+          }
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+            additionalTopics{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
         }
         ... on Slideshow{
           title
+          url
+          contributor{
+            contributorName
+            contributorImage{image{url}}
+          }
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+            additionalTopics{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
         }
         ... on Video{
           title
+          url
+          contributor{
+            contributorName
+            contributorImage{image{url}}
+          }
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+            additionalTopics{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
         }
         ... on Webinar{
           title
+          url
+          contributor{
+            contributorName
+            contributorImage{image{url}}
+          }
+          topicSelector{
+            mainTopic{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+            additionalTopics{
+              ... on TopicPrimary{
+                title
+                url
+              }
+              ... on TopicSecondary{
+                title
+                url
+              }
+              ... on TopicTertiary{
+                title
+                url
+              }
+            }
+          }
         }
       }
     }

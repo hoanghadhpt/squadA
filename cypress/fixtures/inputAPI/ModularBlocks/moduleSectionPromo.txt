@@ -3,6 +3,21 @@ query {
     where: { uidIn: ["blt2de333e1df03ebe7", "blt37735da997003323"] }
   ) {
     entries {
+      meta{
+        entry{
+          title
+          ctaButton{ url
+          text}
+          coverageButton{
+            url
+            text
+          }
+          description
+          logo{ url}
+          logoPosition
+          moduleDisplayOption
+        }
+      }
       items{
         __typename
         ... on Article{

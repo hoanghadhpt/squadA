@@ -8,30 +8,227 @@ query {
           #__typename
           ... on Article {
             title
+            url
+            publishedDate
+            readTime
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
           ... on Document {
             title
+            url
+            publishedDate
+            readTime
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
           ... on Event {
             title
+            url
+            eventDetails{
+              eventUrl
+              endDate
+              startDate
+              buttons{
+                buttonLink
+                buttonName
+              }
+            }
           }
-          ... on ExternalLink {
+           ... on ExternalLink {
             title
+            url
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
           ... on Magazine {
             title
           }
-          ... on Podcast {
+           ... on Podcast {
             title
+            url
+            publishedDate
+            readTime
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
-          ... on Slideshow {
+           ... on Slideshow {
             title
+            url
+            publishedDate
+            readTime
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
-          ... on Video {
+           ... on Video {
             title
+            url
+            publishedDate
+            readTime
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
-          ... on Webinar {
+           ... on Webinar {
             title
+            url
+            publishedDate
+            readTime
+            contributor{
+              contributorName
+              url
+            }
+            featuredImageGroup{
+              featuredImage{ url}
+              featuredImageCredit
+            }
+            topicSelector{
+              mainTopic{
+                ... on TopicPrimary{
+                  title
+                  url
+                }
+                ... on TopicSecondary{
+                  title
+                  url
+                }
+                ... on TopicTertiary{
+                  title
+                  url
+                }
+              }
+            }
           }
         }
         column2 {

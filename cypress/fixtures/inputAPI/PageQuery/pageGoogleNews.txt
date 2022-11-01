@@ -1,0 +1,22 @@
+query{
+  page_google_news{
+    meta{
+      total
+    }
+    items{
+      contentTypeUid
+      contributor{
+        contributorName
+      }
+      description
+      image{
+        title
+        url
+      }
+      language
+      publicationDate
+      title
+      uid
+    }
+  }
+}
