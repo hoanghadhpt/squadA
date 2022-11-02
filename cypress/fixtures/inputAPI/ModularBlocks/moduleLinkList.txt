@@ -20,7 +20,7 @@ query {
         }
         total
       }
-       items{
+      items{
         __typename
         ... on Article{
           title
