@@ -1,5 +1,5 @@
 query {
-        page_basic(url: "/-for-smoke-test-please-do-not-edit-thanks-") {
+        page_basic(url: "/about") {
           content {
             title
             body

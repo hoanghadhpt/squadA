@@ -48,6 +48,15 @@ describe(`Query core content types`, () => {
               "publishedDate"
             );
           });
+          if(testData.pageContent !== "all_event"){
+            it("readTime should not be empty", () => {
+              //apiExpected.verifyRequiredFieldNotNull(testData.pageContent, 'publishedDate');
+              cy.verifyRequiredFieldNotNull(
+                testData.pageContent,
+                "readTime"
+              );
+          });
+          }
         });
         it("And query not return error", () => {
           //apiExpected.verifyNoError(testData.pageContent);
