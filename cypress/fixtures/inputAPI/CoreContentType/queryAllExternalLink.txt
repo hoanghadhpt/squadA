@@ -1,0 +1,97 @@
+query {
+        all_external_link {
+          items {
+            title
+            mobileHeadline
+            contentFormat {
+              title
+              pageDescription
+              seo {
+                metaTitle
+                metaDescription
+                canonicalUrl
+                noIndex
+              }
+              url
+            }
+            contributor {
+              title
+              contributorImage{image{url}}
+            }
+            summary
+            summaryJson
+            featuredImageGroup {
+              featuredImage {
+                url
+              }
+              featuredImageCredit
+              featuredImageCaption
+              imageAltText
+            }
+            externalLink
+            
+            topicSelector {
+              mainTopic {
+                ... on TopicPrimary {
+                  uid
+                  title
+                  url
+                }
+                ... on TopicSecondary {
+                  uid
+                  title
+                  url
+                }
+              }
+              additionalTopics {
+                ... on TopicPrimary {
+                  uid
+                  title
+                  url
+                }
+                ... on TopicSecondary {
+                  uid
+                  title
+                  url
+                }
+                ... on TopicTertiary {
+                  uid
+                  title
+                  url
+                }
+              }
+            }
+            seriesTaxonomy {
+              title
+            }
+            keywords {
+              title
+            }
+            subbrand {
+              title
+            }
+            sponsorshipGatingGroup {
+              sponsorshipGatingSponsorFlag
+              sponsorshipGatingSponsorReference {
+                title
+              }
+              sponsorshipGatingCampaignUrl
+              sponsorshipGatingGateRegFlag
+              sponsorshipGatingGateExternalFieldFlag
+              sponsorshipGatingExternalFormId
+            }
+            relatedEvents {
+              title
+              uid
+            }
+            publishedDate
+            seo {
+              metaTitle
+              metaDescription
+              canonicalUrl
+              noIndex
+            }
+            url
+          }
+        }
+      }

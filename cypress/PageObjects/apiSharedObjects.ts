@@ -59,6 +59,16 @@ class ApiShareObjects {
         })
     }
     // update later. Check URL contains at least 2 items
+    verifyUrlShouldHaveAtleastTwoSlash(contentType: string, findRegex: string){
+        cy.task('getBody').then(resBody =>{    
+            const itemsArr = resBody.data[contentType].items;
+            itemsArr.forEach(item => {
+                var count =  item.match(new RegExp(findRegex,"g") || [])?.length
+                expect(count).greaterThan(1);
+            })
+
+        })
+    }
 
     verifyNoError(contentType: string){
         cy.task('getBody').then( resBody => { 
