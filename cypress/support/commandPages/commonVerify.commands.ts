@@ -78,7 +78,7 @@ Cypress.Commands.add('verifyUrlShouldCorrect', (contentType: string) => {
             var count =  item.url.match(new RegExp("\/","g"))?.length;
             if(count === 1){
                 var singleError = {}
-                singleError['Content Type'] = contentType;
+                singleError['ContentType'] = contentType;
                 singleError['Title'] = item.title;
                 singleError['URL'] = item.url;
                 listErrors.push(singleError);
