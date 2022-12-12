@@ -1,5 +1,5 @@
 query {
-        page_series(where: { url: "/series/a-series-of-documents" }) {
+        page_series(where: { url: "/series/edward-series-url-test---mixed-series" }) {
           meta {
             pagination {
               total

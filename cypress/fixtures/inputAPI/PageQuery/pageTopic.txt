@@ -3,7 +3,7 @@ query Topic{
     sort: oldest
     where:
     {
-    url:"/max-armstrong"}
+    url:"/data"}
   ){
     items{
       __typename

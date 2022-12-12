@@ -1,5 +1,5 @@
 query {
-  all_module_content_spotlight(where: { uid: "bltbd430d2b41e36ca6" }) {
+  all_module_content_spotlight(where: { uid: "blt69c1934c035f7b73" }) {
     entries {
       __typename
       adConfiguration{

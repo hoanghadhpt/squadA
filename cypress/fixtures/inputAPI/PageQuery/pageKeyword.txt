@@ -1,5 +1,5 @@
 query {
-        page_keyword(where: { url: "/keyword/youth" }, limit: 30, page: 1, sort: newest) {
+        page_keyword(where: { url: "/keyword/omdia" }, limit: 30, page: 1, sort: newest) {
           meta {
             pagination {
               total

@@ -3,7 +3,7 @@ query {
     limit: 30
     page: 1
     sort: newest
-    where: { url: "/parenttopic-primary" }
+    where: { url: "/ml" }
   ) {
     meta {
       pagination {

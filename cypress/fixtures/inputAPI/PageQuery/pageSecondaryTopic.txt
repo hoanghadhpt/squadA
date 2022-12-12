@@ -2,7 +2,7 @@ query Topic{
   page_topic(
     sort: oldest
     where: {
-    url:"/parenttopic-primary/parenttopic-secondary"}
+    url:"/ml/deep-learning"}
   ){
     items{
       __typename

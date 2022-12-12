@@ -16,11 +16,6 @@
         "pageContent": "modular_event_promo"
     },
     {
-        "contentType": "Modular External Link",
-       "queryBody": "ModularBlocks/moduleExternalLink.txt",
-        "pageContent": "modular_external_link"
-    },
-    {
         "contentType": "Modular Featured",
        "queryBody": "ModularBlocks/moduleFeatured.txt",
         "pageContent": "modular_featured"

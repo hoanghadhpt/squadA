@@ -1,6 +1,6 @@
 query {
         all_module_newsletter_promo(where: {
-          uidIn: ["bltab11c37a0604abb2", "asd"]
+          uidIn: ["blt06de4b1b8bdeef9f", "asd"]
         }) {
           entries {
             title

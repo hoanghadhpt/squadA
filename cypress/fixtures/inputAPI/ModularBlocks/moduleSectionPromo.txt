@@ -1,5 +1,5 @@
 query {
-        all_module_section_promo(where: { uidIn: ["blt37735da997003323"] }) {
+        all_module_section_promo(where: { uidIn: ["blt85021819ca79497c"] }) {
           entries {
             items {
               ... on Article {

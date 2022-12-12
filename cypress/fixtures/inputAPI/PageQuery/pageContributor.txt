@@ -1,5 +1,5 @@
 query {
-        page_contributor(where: { url: "/author/industry-voice-by-wintersteiger" }) {
+        page_contributor(where: { url: "/author/sophie-ashcroft-" }) {
           meta {
             entry {
               title

@@ -1,6 +1,6 @@
 query {
         all_module_event_promo(where: {
-          uid: "bltd944d604f2f2f24b",
+          uid: "blt1a00a3fea1bec09a",
         }) {
           entries {
             __typename

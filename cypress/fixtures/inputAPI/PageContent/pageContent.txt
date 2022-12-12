@@ -1,6 +1,6 @@
 query {
   page_content(
-    url: "/parenttopic-secondary/at-t-cdo-harnessing-data-and-ai-to-enhance-business-value"
+    url: "/responsible-ai/flagship-women-in-ai-summit-event-kicks-off-at-ai-summit-new-york"
   ) {
     content {
       ... on Article {

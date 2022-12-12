@@ -1,6 +1,6 @@
 query {
         all_module_featured(where: {
-          uidIn: ["bltb6cf6e0cf4bc8d9d"]
+          uidIn: ["blt71a880b5bda49f95"]
         }) {
           entries {
             latest {
