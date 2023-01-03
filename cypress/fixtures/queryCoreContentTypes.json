@@ -12,11 +12,6 @@
         "pageContent": "all_document"
     },
     {
-        "contentType": "All Event",
-       "queryBody": "CoreContentType/queryAllEvents.txt",
-        "pageContent": "all_event"
-    },
-    {
         "contentType": "All External Links",
        "queryBody": "CoreContentType/queryAllExternalLink.txt",
         "pageContent": "all_external_link"
